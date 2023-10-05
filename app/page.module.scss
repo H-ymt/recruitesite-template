@@ -1,0 +1,9 @@
+@import "./styles/breakpoint";
+
+.title {
+  font-size: 24px;
+
+  @include mq(md) {
+    font-size: 40px;
+  }
+}
