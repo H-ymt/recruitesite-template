@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "markuplint": "markuplint \"./src/**/*.{jsx,tsx}\""
+    "markuplint": "markuplint \"./app/**/*.{jsx,tsx}\""
   },
   "dependencies": {
     "@markuplint/jsx-parser": "^3.10.0",
