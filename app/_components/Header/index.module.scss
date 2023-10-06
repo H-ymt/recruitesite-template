@@ -1,0 +1,46 @@
+@import "@/app/styles/breakpoint";
+
+.header {
+  position: sticky;
+  top: 0;
+
+  @include mq(md) {
+    padding-top: 24px;
+  }
+}
+
+.inner {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1024px;
+  height: var(--headerHeight);
+  margin-inline: auto;
+  padding-inline: 16px;
+  border-radius: var(--borderRadius-md);
+  background: var(--bg-primary);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease-out;
+}
+
+@media (hover: hover) {
+  .logo:hover {
+    opacity: 0.7;
+    transition: opacity 0.2s ease-out;
+  }
+}
+
+.logoText {
+  font-size: 14px;
+  font-weight: 600;
+
+  @include mq(md) {
+    font-size: 12px;
+  }
+}

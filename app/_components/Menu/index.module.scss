@@ -1,0 +1,223 @@
+@import "@/app/styles/breakpoint";
+
+.button {
+  display: flex;
+  align-items: center;
+  color: inherit;
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.nav {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: var(--headerHeight);
+  left: 0;
+  width: 100%;
+  background: var(--bg-primary);
+  transition: opacity var(--transition-primary);
+
+  @include mq(md) {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    position: unset;
+    inset: unset;
+    width: auto;
+  }
+}
+
+.nav.open {
+  visibility: visible;
+  opacity: 1;
+  border-bottom-right-radius: var(--borderRadius-md);
+  border-bottom-left-radius: var(--borderRadius-md);
+  transition: opacity var(--transition-primary);
+}
+
+.nav.open::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 92%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  background: var(--color-text-primary);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 24px 16px;
+
+  @include mq(md) {
+    flex-direction: row;
+    padding: 0;
+    border: none;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  font-size: 16px;
+  transition: opacity var(--transition-primary);
+  cursor: pointer;
+
+  @include mq(md) {
+    height: var(--headerHeight);
+    gap: 4px;
+    padding: 0 12px;
+    font-size: 14px;
+  }
+}
+
+@media (hover: hover) {
+  .item:hover {
+    opacity: 0.7;
+    transition: opacity var(--transition-primary);
+  }
+}
+
+// ****
+// プラス・マイナスアイコンのスタイル
+// ****
+.parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include mq(md) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.minusIcon {
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.plusIcon.hidden,
+.minusIcon.hidden {
+  display: none;
+}
+
+@include mq(md) {
+  @media (hover: hover) {
+    .parent:hover .plusIcon {
+      display: none;
+    }
+
+    .parent:hover .minusIcon {
+      display: block;
+    }
+  }
+}
+
+// ****
+// ドロップダウンメニューのスタイル
+// ****
+.parentInner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (hover: hover) {
+  .parent:hover {
+    opacity: 1;
+  }
+}
+
+@include mq(md) {
+  @media (hover: hover) {
+    .parent:hover .child::before {
+      display: block;
+      content: "";
+      top: 0;
+      width: 95%;
+      margin-inline: auto;
+      height: 1px;
+      padding: 0 16px;
+      background: #171717e4;
+      transition: transform var(--transition-primary);
+    }
+  }
+}
+
+.child {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 0;
+  transform: scaleY(0);
+  transition: transform var(--transition-primary);
+  transform-origin: center top;
+
+  @include mq(md) {
+    position: absolute;
+    top: var(--headerHeight);
+    left: 0;
+    width: 100%;
+  }
+}
+
+.child.active {
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+  transform: scaleY(1);
+  transform-origin: top center;
+  transition: transform var(--transition-primary);
+}
+
+@include mq(md) {
+  @media (hover: hover) {
+    .parent:hover .child {
+      transition: transform var(--transition-primary);
+      transform: scaleY(1);
+    }
+  }
+}
+
+.childList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 16px;
+
+  @include mq(md) {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    padding: 28px 0;
+    text-align: center;
+    background: var(--bg-primary);
+    border-bottom-right-radius: var(--borderRadius-md);
+    border-bottom-left-radius: var(--borderRadius-md);
+  }
+}
+
+.childItem {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 400;
+
+  @include mq(md) {
+    font-weight: 700;
+  }
+}
+
+@media (hover: hover) {
+  .childItem:hover {
+    opacity: 0.8;
+    transition: opacity var(--transition-primary);
+  }
+}
