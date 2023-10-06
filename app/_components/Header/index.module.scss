@@ -17,9 +17,12 @@
   max-width: 1024px;
   height: var(--headerHeight);
   margin-inline: auto;
-  padding-inline: 16px;
-  border-radius: var(--borderRadius-md);
+  padding: 4px 16px;
   background: var(--bg-primary);
+
+  @include mq(md) {
+    border-radius: var(--borderRadius-md);
+  }
 }
 
 .logo {
