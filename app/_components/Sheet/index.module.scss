@@ -1,0 +1,11 @@
+@import "@/app/styles/breakpoint";
+
+.sheet {
+  width: calc(100% - 48px);
+  margin-inline: auto;
+
+  @include mq(sm) {
+    width: calc(100% - 72px);
+    max-width: 1100px;
+  }
+}

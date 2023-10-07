@@ -1,6 +1,7 @@
 @import "@/app/styles/breakpoint";
 
 .header {
+  z-index: var(--zIndex-header);
   position: sticky;
   top: 0;
 
