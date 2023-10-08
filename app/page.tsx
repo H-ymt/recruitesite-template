@@ -8,7 +8,9 @@ export default function Home() {
       <div className={styles.hero}>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
-            Jamstackで高速かつ<span className={styles.break}>セキュアなWebサイトを構築</span>
+            Jamstackで高速かつ
+            <br />
+            セキュアなWebサイトを構築
           </h1>
           <p className={styles.heroText}>
             私たちはモダンなフロントエンド技術とヘッドレスCMSを駆使して、高速かつセキュアでスケーラブルなWebサイトを構築します。
