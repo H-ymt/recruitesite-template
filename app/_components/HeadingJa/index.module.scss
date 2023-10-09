@@ -1,0 +1,7 @@
+.title {
+  font-size: 30px;
+
+  @include mq(lg) {
+    font-size: 40px;
+  }
+}
