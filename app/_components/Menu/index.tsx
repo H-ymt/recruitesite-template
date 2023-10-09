@@ -29,12 +29,22 @@ export default function Menu() {
             <Link href="/about">企業情報</Link>
           </div>
 
-          <div
-            className={`${styles.item} ${styles.parent}`}
-            onClick={handleMenuToggle}
-            role="button"
-          >
+          <div className={`${styles.item} ${styles.parent}`} role="button">
             <div className={styles.parentInner}>
+              <div>職種から探す</div>
+
+              <Plus
+                size={14}
+                strokeWidth={2}
+                className={`${styles.plusIcon} ${isMenuOpen ? styles.hidden : ""}`}
+              />
+              <Minus
+                size={14}
+                strokeWidth={2}
+                className={`${styles.minusIcon} ${isMenuOpen ? "" : styles.hidden}`}
+              />
+            </div>
+            <div className={`${styles.parentInner} ${styles.mobile}`} onClick={handleMenuToggle}>
               <div>職種から探す</div>
 
               <Plus

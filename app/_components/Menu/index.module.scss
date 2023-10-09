@@ -48,6 +48,10 @@
   transform: translateX(-50%);
   height: 1px;
   background: var(--color-text-primary);
+
+  @include mq(md) {
+    display: none;
+  }
 }
 
 .list {
@@ -127,9 +131,23 @@
 // ドロップダウンメニューのスタイル
 // ****
 .parentInner {
+  display: none;
+
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.parentInner.mobile {
   display: flex;
   align-items: center;
   gap: 8px;
+
+  @include mq(md) {
+    display: none;
+  }
 }
 
 @media (hover: hover) {
