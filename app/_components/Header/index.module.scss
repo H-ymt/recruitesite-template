@@ -4,10 +4,6 @@
   z-index: var(--zIndex-header);
   position: sticky;
   top: 0;
-
-  @include mq(md) {
-    padding-top: 24px;
-  }
 }
 
 .inner {
@@ -18,11 +14,22 @@
   max-width: 1024px;
   height: var(--headerHeight);
   margin-inline: auto;
-  padding: 4px 16px;
+  padding: 0 16px;
   background: var(--bg-primary);
 
   @include mq(md) {
     border-radius: var(--borderRadius-md);
+    transition: border-radius 0.5s ease;
+  }
+}
+
+@include mq(md) {
+  @media (hover: hover) {
+    .inner:hover {
+      border-bottom-right-radius: unset;
+      border-bottom-left-radius: unset;
+      transition: border-radius 0.1s ease;
+    }
   }
 }
 
