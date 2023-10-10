@@ -12,19 +12,10 @@
   border: 1px solid var(--color-button-primary);
   border-radius: var(--borderRadius-lg);
   font-weight: 500;
-
-  transition: transform var(--transition-primary);
 }
 
 .primaryButton {
   background: transparent;
-}
-
-@media (hover: hover) {
-  .primaryButton:hover {
-    transform: scale(0.99, 0.99);
-    transition: transform var(--transition-primary);
-  }
 }
 
 .icon {
