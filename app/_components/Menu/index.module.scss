@@ -181,7 +181,7 @@
 
   @include mq(md) {
     position: absolute;
-    top: var(--headerHeight);
+    top: calc(var(--headerHeight) - 1px);
     left: 0;
     width: 100%;
   }
