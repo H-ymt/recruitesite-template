@@ -31,6 +31,8 @@ body {
 body {
   font-weight: 700;
   font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
+  letter-spacing: 0.06em;
+  background: url("/bg.webp") center center no-repeat;
 }
 
 ul,
@@ -45,4 +47,5 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
 }
