@@ -1,0 +1,40 @@
+@import "@/app/styles/breakpoint";
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: fit-content;
+  min-width: 200px;
+  height: 48px;
+  padding: 0 24px;
+  border: 1px solid var(--color-button-primary);
+  border-radius: var(--borderRadius-lg);
+  font-weight: 500;
+
+  transition: transform var(--transition-primary);
+}
+
+.primaryButton {
+  background: transparent;
+}
+
+@media (hover: hover) {
+  .primaryButton:hover {
+    transform: scale(0.99, 0.99);
+    transition: transform var(--transition-primary);
+  }
+}
+
+.icon {
+  transform: translate3d(0, 0, 0);
+  transition: transform var(--transition-primary);
+}
+
+@media (hover: hover) {
+  .button:hover .icon {
+    transform: translate3d(3px, 0, 0);
+    transition: transform var(--transition-primary);
+  }
+}
