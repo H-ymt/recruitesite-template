@@ -4,6 +4,10 @@
   z-index: var(--zIndex-header);
   position: sticky;
   top: 0;
+
+  @include mq(md) {
+    top: 16px;
+  }
 }
 
 .inner {

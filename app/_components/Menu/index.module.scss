@@ -209,6 +209,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding-top: 16px;
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.06);
 
   @include mq(md) {
     display: flex;
