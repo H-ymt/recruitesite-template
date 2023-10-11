@@ -41,7 +41,7 @@
 
 .icon {
   transform: translate3d(0, 0, 0);
-  transition: transform var(--transition-primary);
+  transition: transform var(--transition-slowly);
 }
 
 @media (hover: hover) {
