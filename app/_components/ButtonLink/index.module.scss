@@ -16,6 +16,27 @@
 
 .primaryButton {
   background: transparent;
+  background-image: linear-gradient(
+    90deg,
+    var(--color-button-primary) 50%,
+    transparent 50%
+  );
+  background-position: 100%;
+  background-size: 250%;
+  transition: background-position var(--transition-slowly);
+}
+
+@media (hover: hover) {
+  .primaryButton:hover {
+    color: var(--color-text-white);
+    background-position: 0;
+    transition: background-position var(--transition-slowly);
+  }
+
+  .primaryButton:hover .icon {
+    transition: stroke var(--transition-slowly);
+    stroke: var(--color-text-white);
+  }
 }
 
 .icon {
