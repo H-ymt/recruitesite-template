@@ -2,17 +2,17 @@
 
 .hero {
   display: flex;
+  height: calc(100vh - 70px);
+  height: calc(100dvh - 70px);
   position: relative;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  height: 100dvh;
   gap: 32px;
 
   @include mq(md) {
-    height: calc(90vh - 70px);
-    height: calc(90dvh - 70px);
+    height: calc(100vh - 94px);
+    height: calc(100dvh - 94px);
     flex-direction: row;
     gap: 40px;
   }
@@ -73,4 +73,44 @@
 
 .break {
   display: inline-block;
+}
+
+.sectionTitle {
+  padding: 16px 0;
+  font-size: 30px;
+  letter-spacing: 0.15em;
+
+  @include mq(lg) {
+    padding: 20px 0;
+    font-size: 40px;
+  }
+}
+
+.sectionTitleEn {
+  display: block;
+  padding-bottom: 8px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+
+  @include mq(lg) {
+    padding-bottom: 12px;
+    font-size: 16px;
+  }
+}
+
+.newGraduateContent {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-direction: column;
+
+  @include mq(md) {
+    flex-direction: row;
+  }
+}
+
+.newGraduateImage {
+  @include mq(md) {
+    max-width: 800px;
+  }
 }

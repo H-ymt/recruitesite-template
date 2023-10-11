@@ -1,11 +1,15 @@
 :root {
   --color-text-primary: #020202;
+  --color-text-white: #fdfdfd;
+  --color-button-primary: #020202;
 
-  --bg-primary: #ffff;
+  --bg-primary: #fdfdfd;
 
   --borderRadius-md: 12px;
+  --borderRadius-lg: 22px;
 
   --transition-primary: 0.2s ease-out;
+  --transition-slowly: 0.4s ease-out;
 
   --headerHeight: 70px;
 
@@ -29,10 +33,9 @@ body {
 }
 
 body {
-  font-weight: 700;
+  font-weight: 600;
   font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
   letter-spacing: 0.06em;
-  background: url("/bg.webp") center center no-repeat;
 }
 
 ul,
@@ -48,4 +51,8 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+p {
+  text-align: justify;
 }
