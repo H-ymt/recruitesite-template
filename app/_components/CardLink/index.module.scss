@@ -1,0 +1,88 @@
+@import "@/app/styles/breakpoint";
+
+.card {
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 30px;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.06);
+  border-radius: var(--borderRadius-lg);
+
+  @include mq(md) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    max-width: 340px;
+    padding: 48px 40px 30px;
+  }
+}
+
+// カードにホバーした時のスタイル
+@media (hover: hover) {
+  .card:hover .arrow {
+    transform: translateX(4px);
+    transition: transform var(--transition-primary);
+  }
+
+  .card:hover .image {
+    transform: scale(1.02);
+    transition: transform var(--transition-primary);
+  }
+}
+
+.image {
+  max-width: 140px;
+  transition: transform var(--transition-primary);
+
+  @include mq(md) {
+    max-width: 100%;
+  }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  font-family: Lato, sans-serif;
+}
+
+.titleEn {
+  font-size: 20px;
+
+  @include mq(md) {
+    font-size: 24px;
+  }
+}
+
+.titleJp {
+  font-size: 12px;
+
+  @include mq(md) {
+    font-size: 14px;
+  }
+}
+
+.arrow {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  right: 18px;
+  bottom: 18px;
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 50%;
+  transition: transform var(--transition-primary);
+
+  @include mq(md) {
+    right: 30px;
+    bottom: 36px;
+  }
+}
+
+.arrowRight {
+  stroke: #ffff;
+}
