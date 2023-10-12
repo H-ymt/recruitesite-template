@@ -19,8 +19,16 @@ export default function Menu() {
 
   return (
     <>
-      <button className={styles.button} onClick={handleClick} aria-label="メニューを開閉する">
-        {isOpen! ? <X size={36} strokeWidth={1} /> : <LucideMenu size={36} strokeWidth={1} />}
+      <button
+        className={styles.button}
+        onClick={handleClick}
+        aria-label="メニューを開閉する"
+      >
+        {isOpen! ? (
+          <X size={36} strokeWidth={1} />
+        ) : (
+          <LucideMenu size={36} strokeWidth={1} />
+        )}
       </button>
 
       <nav className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
@@ -44,7 +52,10 @@ export default function Menu() {
                 className={`${styles.minusIcon} ${isMenuOpen ? "" : styles.hidden}`}
               />
             </div>
-            <div className={`${styles.parentInner} ${styles.mobile}`} onClick={handleMenuToggle}>
+            <div
+              className={`${styles.parentInner} ${styles.mobile}`}
+              onClick={handleMenuToggle}
+            >
               <div>職種から探す</div>
 
               <Plus
@@ -75,6 +86,10 @@ export default function Menu() {
                 </li>
               </ul>
             </div>
+          </div>
+
+          <div className={styles.item}>
+            <Link href="/new-graduates">新卒採用</Link>
           </div>
 
           <div className={styles.item}>
