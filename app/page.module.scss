@@ -8,18 +8,25 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
 
   @include mq(md) {
     height: calc(100vh - 94px);
     height: calc(100dvh - 94px);
-    flex-direction: row;
-    gap: 40px;
   }
 }
 
-.heroContent {
-  display: inline-block;
+.heroHead {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+
+  @include mq(md) {
+    flex-direction: row;
+    gap: 40px;
+  }
 }
 
 .hero::before {
@@ -75,13 +82,34 @@
   display: inline-block;
 }
 
+.heroButtonGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  @include mq(md) {
+    gap: 40px;
+    flex-direction: row;
+    margin-top: 60px;
+  }
+}
+
+.homeSection {
+  padding: 40px 0;
+
+  @include mq(md) {
+    padding: 100px 0;
+  }
+}
+
 .sectionTitle {
   padding: 16px 0;
   font-size: 30px;
   letter-spacing: 0.15em;
 
   @include mq(lg) {
-    padding: 20px 0;
+    padding: 24px 0;
     font-size: 40px;
   }
 }
@@ -98,6 +126,10 @@
   }
 }
 
+.newGraduateSection {
+  padding-bottom: 40px;
+}
+
 .newGraduateContent {
   display: flex;
   align-items: center;
@@ -112,5 +144,29 @@
 .newGraduateImage {
   @include mq(md) {
     max-width: 800px;
+  }
+}
+
+.newGraduateText {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+
+  @include mq(md) {
+    align-items: flex-end;
+  }
+}
+
+.careerCards {
+  display: grid;
+  gap: 24px;
+
+  @include mq(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mq(lg) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

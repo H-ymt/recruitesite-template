@@ -2,11 +2,12 @@
   --color-text-primary: #020202;
   --color-text-white: #fdfdfd;
   --color-button-primary: #020202;
+  --color-button-secondary: #3c4e91;
 
   --bg-primary: #fdfdfd;
 
   --borderRadius-md: 12px;
-  --borderRadius-lg: 22px;
+  --borderRadius-lg: 28px;
 
   --transition-primary: 0.2s ease-out;
   --transition-slowly: 0.4s ease-out;

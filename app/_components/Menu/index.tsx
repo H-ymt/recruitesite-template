@@ -73,13 +73,13 @@ export default function Menu() {
             <div className={`${styles.child} ${isMenuOpen ? styles.active : ""}`}>
               <ul className={styles.childList}>
                 <li className={styles.childItem}>
-                  <Link href="/position/crm">エンジニア</Link>
+                  <Link href="/position/engineer">エンジニア</Link>
                 </li>
                 <li className={styles.childItem}>
-                  <Link href="/position/crm">Webデザイナー</Link>
+                  <Link href="/position/designer">Webデザイナー</Link>
                 </li>
                 <li className={styles.childItem}>
-                  <Link href="/position/crm">カスタマー</Link>
+                  <Link href="/position/customer">カスタマー</Link>
                 </li>
                 <li className={styles.childItem}>
                   <Link href="/position/crm">CRM</Link>
