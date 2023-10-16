@@ -1,10 +1,13 @@
 :root {
   --color-text-primary: #020202;
   --color-text-white: #fdfdfd;
+  --color-text-muted: #4f4f4f;
   --color-button-primary: #020202;
   --color-button-secondary: #3c4e91;
 
   --bg-primary: #fdfdfd;
+
+  --borderColor-gray: #d1d1d1;
 
   --borderRadius-md: 12px;
   --borderRadius-lg: 28px;

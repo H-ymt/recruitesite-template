@@ -5,15 +5,28 @@ import type {
   MicroCMSDate,
   MicroCMSContentId,
 } from "microcms-js-sdk";
+import { notFound } from "next/navigation";
 
 // ニュースの型定義
 export type News = {
+  id: string;
   title: string;
   content: string;
-  date: number;
+  date: string;
   category: string;
-} & MicroCMSContentId &
-  MicroCMSDate;
+};
+
+// メタ情報の型定義
+export type Meta = {
+  title?: string;
+  description?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  canonical?: string;
+};
+
+export type Article = News & MicroCMSContentId & MicroCMSDate;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error("MICROCMS_SERVICE_DOMAIN is required");
@@ -30,22 +43,38 @@ export const client = createClient({
 });
 
 // ニュース一覧を取得
-export const getArticleList = async (queries?: MicroCMSQueries) => {
-  const listData = await client.getList<News>({
-    endpoint: "news",
-    queries,
-  });
+export const getNewsList = async (queries?: MicroCMSQueries) => {
+  const listData = await client
+    .getList<News>({
+      endpoint: "news",
+      queries,
+    })
+    .catch(notFound);
 
   return listData;
 };
 
 // ニュース詳細を取得
-export const getArticleDetail = async (contentId: string, queries?: MicroCMSQueries) => {
-  const detailData = await client.getListDetail<News>({
-    endpoint: "news",
-    contentId,
-    queries,
-  });
+export const getNewsDetail = async (contentId: string, queries?: MicroCMSQueries) => {
+  const detailData = await client
+    .getListDetail<News>({
+      endpoint: "news",
+      contentId,
+      queries,
+    })
+    .catch(notFound);
 
   return detailData;
+};
+
+// メタ情報を取得
+export const getMeta = async (queries?: MicroCMSQueries) => {
+  const data = await client
+    .getObject<Meta>({
+      endpoint: "meta",
+      queries,
+    })
+    .catch(() => null);
+
+  return data;
 };

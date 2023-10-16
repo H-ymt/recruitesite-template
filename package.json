@@ -12,6 +12,7 @@
   "dependencies": {
     "@markuplint/jsx-parser": "^3.10.0",
     "@markuplint/react-spec": "^3.11.0",
+    "dayjs": "^1.11.10",
     "lucide-react": "^0.284.0",
     "microcms-js-sdk": "^2.6.1",
     "next": "13.5.4",

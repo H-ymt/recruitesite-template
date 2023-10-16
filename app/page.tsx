@@ -3,8 +3,18 @@ import styles from "./page.module.scss";
 import Sheet from "./_components/Sheet";
 import { PrimaryButton, SecondaryButton } from "./_components/ButtonLink";
 import CardLink from "./_components/CardLink";
+import NewsList from "./_components/NewsList";
+import { getNewsList } from "@/app/_libs/microcms";
+import { TOP_NEWS_LIMIT } from "./_constants";
+import { ReadMore } from "./_components/ReadMore";
 
-export default function Home() {
+export const revalidate = 120;
+
+export default async function Page() {
+  const data = await getNewsList({
+    limit: TOP_NEWS_LIMIT,
+  });
+
   return (
     <Sheet>
       <div className={styles.hero}>
@@ -94,10 +104,15 @@ export default function Home() {
         </div>
       </section>
 
-      <h2 className={styles.sectionTitle}>
-        <span className={styles.sectionTitleEn}>News</span>
-        ニュース
-      </h2>
+      <section className={styles.homeSection}>
+        <h2 className={styles.sectionTitle}>
+          <span className={styles.sectionTitleEn}>News</span>
+          ニュース
+        </h2>
+
+        <NewsList articles={data.contents} />
+        <ReadMore totalCount={data.totalCount} />
+      </section>
     </Sheet>
   );
 }
