@@ -2,8 +2,7 @@
 
 .hero {
   display: flex;
-  height: calc(100vh - 70px);
-  height: calc(100dvh - 70px);
+  height: calc(100vh - 160px);
   position: relative;
   justify-content: center;
   flex-direction: column;
@@ -11,7 +10,6 @@
 
   @include mq(md) {
     height: calc(100vh - 94px);
-    height: calc(100dvh - 94px);
   }
 }
 
