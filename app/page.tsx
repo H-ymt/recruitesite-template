@@ -6,7 +6,6 @@ import CardLink from "./_components/CardLink";
 import NewsList from "./_components/NewsList";
 import { getNewsList } from "@/app/_libs/microcms";
 import { TOP_NEWS_LIMIT } from "./_constants";
-import { ReadMore } from "./_components/ReadMore";
 
 export const revalidate = 120;
 
@@ -21,9 +20,9 @@ export default async function Page() {
         <div className={styles.heroHead}>
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>
-              Jamstackで高速かつ
+              モダンなフロントエンドで
               <br />
-              セキュアなWebサイトを構築
+              Webの世界を変える
             </h1>
             <p className={styles.heroText}>
               私たちはモダンなフロントエンド技術とヘッドレスCMSを駆使して、高速かつセキュアでスケーラブルなWebサイトを構築します。
@@ -111,7 +110,182 @@ export default async function Page() {
         </h2>
 
         <NewsList articles={data.contents} />
-        <ReadMore totalCount={data.totalCount} />
+      </section>
+
+      <section className={styles.homeSection}>
+        <h2 className={styles.sectionTitle}>
+          <span className={styles.sectionTitleEn}>Tech&ensp;Stack</span>
+          技術スタック
+        </h2>
+
+        <p>
+          弊社で利用している技術スタックを紹介します。
+          <br />
+          エンジニアが持ちうる最大限の技術を発揮するには、好きな技術を扱える環境が必要です。
+          <br />
+          チーム・プロジェクトにとって最適な技術をそれぞれが考え、選定していく環境となるよう心がけています。
+        </p>
+
+        <div className={styles.stackContainer}>
+          <div className={styles.stackIcon}>
+            <Image
+              src="/logo_typescript.png"
+              width="56"
+              height="56"
+              alt="TypeScript"
+              aria-hidden="true"
+            />
+            <span className={styles.stackName}>TypeScript</span>
+          </div>
+
+          <div className={styles.stackIcon}>
+            <Image src="/icon_react.png" width="48" height="48" alt="React" />
+            <span className={styles.stackName}>React</span>
+          </div>
+
+          <div className={styles.stackIcon}>
+            <Image
+              src="/logo_vue.png"
+              width="56"
+              height="56"
+              alt="Vue"
+              aria-hidden="true"
+            />
+            <span className={styles.stackName}>Vue.js</span>
+          </div>
+
+          <div className={styles.stackIcon}>
+            <Image
+              src="/icon_nextjs.png"
+              width="56"
+              height="56"
+              alt="Next.js"
+              aria-hidden="true"
+            />
+            <span className={styles.stackName}>Next.js</span>
+          </div>
+
+          <div className={styles.stackIcon}>
+            <Image
+              src="/logo_nuxt.png"
+              width="56"
+              height="56"
+              alt="Nuxt.js"
+              aria-hidden="true"
+            />
+            <span className={styles.stackName}>Nuxt.js</span>
+          </div>
+
+          <div className={styles.stackIcon}>
+            <Image
+              src="/icon_astro.png"
+              width="56"
+              height="56"
+              alt="Astro"
+              aria-hidden="true"
+            />
+            <span className={styles.stackName}>Astro</span>
+          </div>
+
+          <div className={styles.stackIcon}>
+            <Image
+              src="/icon_nodejs.png"
+              width="56"
+              height="56"
+              alt="node.js"
+              aria-hidden="true"
+            />
+            <span className={styles.stackName}>node.js</span>
+          </div>
+
+          <div className={styles.stackIcon}>
+            <Image
+              src="/logo_bun.png"
+              width="56"
+              height="56"
+              alt="Bun"
+              aria-hidden="true"
+            />
+            <span className={styles.stackName}>Bun</span>
+          </div>
+
+          <div className={styles.stackIcon}>
+            <Image
+              src="/logo_pnpm.png"
+              width="56"
+              height="56"
+              alt="pnpm"
+              aria-hidden="true"
+            />
+            <span className={styles.stackName}>pnpm</span>
+          </div>
+
+          <div className={styles.stackIcon}>
+            <Image
+              src="/icon_vercel.png"
+              width="56"
+              height="56"
+              alt="Vercel"
+              aria-hidden="true"
+            />
+            <span className={styles.stackName}>Vercel</span>
+          </div>
+
+          <div className={styles.stackIcon}>
+            <Image
+              src="/icon_netlify.png"
+              width="56"
+              height="56"
+              alt="Netlify"
+              aria-hidden="true"
+            />
+            <span className={styles.stackName}>Netlify</span>
+          </div>
+
+          <div className={styles.stackIcon}>
+            <Image
+              src="/logo_cloudflare.png"
+              width="56"
+              height="56"
+              alt="Cloudflare"
+              aria-hidden="true"
+            />
+            <span className={styles.stackName}>Cloudflare</span>
+          </div>
+
+          <div className={styles.stackIcon}>
+            <Image
+              src="/icon_firebase.png"
+              width="56"
+              height="56"
+              alt="Firebase"
+              aria-hidden="true"
+            />
+            <span className={styles.stackName}>Firebase</span>
+          </div>
+
+          <div className={styles.stackIcon}>
+            <Image
+              src="/icon_supabase.png"
+              width="56"
+              height="56"
+              alt="Supabase"
+              aria-hidden="true"
+            />
+            <span className={styles.stackName}>Supabase</span>
+          </div>
+
+          <div className={styles.stackIcon}>
+            <Image
+              src="/icon_github.png"
+              width="56"
+              height="56"
+              alt="GitHub"
+              aria-hidden="true"
+            />
+            <span className={styles.stackName}>GitHub</span>
+          </div>
+        </div>
       </section>
     </Sheet>
   );

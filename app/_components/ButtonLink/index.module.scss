@@ -36,7 +36,7 @@
   }
 
   .primaryButton:hover .icon {
-    transition: stroke var(--transition-slowly);
+    transition: stroke 0.5s ease 1.2s;
     stroke: var(--color-text-white);
   }
 }

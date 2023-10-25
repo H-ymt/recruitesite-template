@@ -173,3 +173,34 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.stackContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  justify-items: center;
+  row-gap: 20px;
+  column-gap: 16px;
+  max-width: 780px;
+  padding-top: 56px;
+
+  @include mq(md) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.stackIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 130px;
+  padding: 18px 0;
+  background: #f8f7f7;
+  border-radius: var(--borderRadius-sm);
+}
+
+.stackName {
+  font-size: 14px;
+  font-weight: 400;
+}
