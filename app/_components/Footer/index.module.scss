@@ -1,0 +1,47 @@
+@import "@/app/styles/breakpoint";
+
+.footer {
+  border-top: 1px solid hsl(0deg 9% 31.47% / 10%);
+}
+
+.footerInner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1040px;
+  margin-inline: auto;
+  padding: 40px 32px;
+
+  @include mq(md) {
+    flex-direction: row;
+    gap: 60px;
+    padding: 70px 48px;
+  }
+}
+
+.footerNav {
+  display: flex;
+  gap: 32px;
+
+  @include mq(md) {
+    flex-direction: row;
+    gap: 60px;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.listParent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.listChild {
+  padding-left: 4px;
+  font-weight: 500;
+}
