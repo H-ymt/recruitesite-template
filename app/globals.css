@@ -5,7 +5,7 @@
   --color-button-primary: #020202;
   --color-button-secondary: #3c4e91;
 
-  --bg-primary: #fdfdfd;
+  --bg-primary: #ffffff;
 
   --borderColor-gray: #d1d1d1;
 
@@ -34,6 +34,7 @@ html,
 body {
   max-width: 100vw;
   color: var(--color-text-primary);
+  background-color: var(--bg-primary);
 }
 
 body {
