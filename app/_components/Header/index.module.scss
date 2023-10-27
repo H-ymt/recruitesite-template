@@ -14,7 +14,7 @@
   max-width: 1024px;
   height: var(--headerHeight);
   margin-inline: auto;
-  padding: 0 16px;
+  padding: 0 24px;
   background: var(--bg-primary);
 
   @include mq(md) {
