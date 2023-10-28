@@ -4,6 +4,7 @@
   --color-text-muted: #4f4f4f;
   --color-button-primary: #020202;
   --color-button-secondary: #3c4e91;
+  --color-focus-outline: #0056ff;
 
   --bg-primary: #ffffff;
 
@@ -51,6 +52,18 @@ dl {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:focus {
+  outline-width: 2px;
+  outline-offset: 0px;
+  outline-color: var(--color-focus-outline);
+}
+
+a:focus-visible {
+  outline-width: 2px;
+  outline-offset: 0px;
+  outline-color: var(--color-focus-outline);
 }
 
 img {
