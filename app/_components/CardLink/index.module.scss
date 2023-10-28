@@ -20,6 +20,12 @@
   }
 }
 
+.card:focus-visible {
+  outline-width: 2px;
+  outline-offset: 0px;
+  outline-color: var(--color-focus-outline);
+}
+
 // カードにホバーした時のスタイル
 @media (hover: hover) {
   .card:hover .arrow {
