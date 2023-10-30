@@ -74,3 +74,8 @@ img {
 p {
   text-align: justify;
 }
+
+button {
+  background-color: transparent;
+  border: none;
+}
