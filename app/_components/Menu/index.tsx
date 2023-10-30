@@ -8,21 +8,15 @@ import { useRef, useState } from "react";
 export default function Menu() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   const linkRef = useRef<HTMLDivElement>(null);
   const childRef = useRef<HTMLDivElement>(null);
 
+  const toggleIsOpen = () => setIsOpen(!isOpen);
+  const toggleIsMenuOpen = () => setIsMenuOpen(!isMenuOpen);
+
   const handleFocus = () => {
     if (childRef.current) {
-      childRef.current.className = `${childRef.current.className} ${styles.active}`;
+      childRef.current.className += ` ${styles.active}`;
     }
   };
 
@@ -32,14 +26,19 @@ export default function Menu() {
     }
   };
 
+  const handleMenuToggle = () => {
+    toggleIsMenuOpen();
+    handleFocus();
+  };
+
   return (
     <>
       <button
         className={styles.button}
-        onClick={handleClick}
+        onClick={toggleIsOpen}
         aria-label="メニューを開閉する"
       >
-        {isOpen! ? (
+        {isOpen ? (
           <X size={36} strokeWidth={1} />
         ) : (
           <LucideMenu size={36} strokeWidth={1} />
@@ -62,7 +61,6 @@ export default function Menu() {
               onBlur={handleBlur}
             >
               <span>職種から探す</span>
-
               <Plus
                 size={14}
                 strokeWidth={2}

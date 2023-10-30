@@ -117,9 +117,12 @@
 
 @include mq(md) {
   @media (hover: hover) {
-    .parent:hover .plusIcon,
-    .parent.focused .plusIcon {
+    .parent:hover .plusIcon {
       display: none;
+    }
+
+    .parent:hover .minusIcon {
+      display: block;
     }
   }
 }
