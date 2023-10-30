@@ -17,7 +17,7 @@ export default function Menu() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const parentRef = useRef<HTMLDivElement>(null);
+  const linkRef = useRef<HTMLDivElement>(null);
   const childRef = useRef<HTMLDivElement>(null);
 
   const handleFocus = () => {
@@ -54,7 +54,7 @@ export default function Menu() {
             </Link>
           </div>
 
-          <div ref={parentRef} className={`${styles.item} ${styles.parent}`}>
+          <div ref={linkRef} className={`${styles.item} ${styles.parent}`}>
             <button
               type="button"
               className={`${styles.parentInner} ${styles.parentLinkButton}`}
@@ -98,22 +98,42 @@ export default function Menu() {
             >
               <ul className={styles.childList}>
                 <li className={styles.childItem}>
-                  <Link className={styles.navLink} href="/position/engineer">
+                  <Link
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
+                    className={styles.navLink}
+                    href="/position/engineer"
+                  >
                     エンジニア
                   </Link>
                 </li>
                 <li className={styles.childItem}>
-                  <Link className={styles.navLink} href="/position/designer">
+                  <Link
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
+                    className={styles.navLink}
+                    href="/position/designer"
+                  >
                     Webデザイナー
                   </Link>
                 </li>
                 <li className={styles.childItem}>
-                  <Link className={styles.navLink} href="/position/customer">
+                  <Link
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
+                    className={styles.navLink}
+                    href="/position/customer"
+                  >
                     カスタマー
                   </Link>
                 </li>
                 <li className={styles.childItem}>
-                  <Link className={styles.navLink} href="/position/crm">
+                  <Link
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
+                    className={styles.navLink}
+                    href="/position/crm"
+                  >
                     CRM
                   </Link>
                 </li>
