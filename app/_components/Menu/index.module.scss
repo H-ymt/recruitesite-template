@@ -117,12 +117,9 @@
 
 @include mq(md) {
   @media (hover: hover) {
-    .parent:hover .plusIcon {
+    .parent:hover .plusIcon,
+    .parent.focused .plusIcon {
       display: none;
-    }
-
-    .parent:hover .minusIcon {
-      display: block;
     }
   }
 }
@@ -170,19 +167,8 @@
       transition: transform var(--transition-primary);
     }
   }
-}
 
-@include mq(md) {
-  .child.focus {
-    visibility: visible;
-    opacity: 1;
-    height: 100%;
-    transform: scaleY(1);
-    transform-origin: top center;
-    transition: transform var(--transition-primary);
-  }
-
-  .child.focus::before {
+  .child.active::before {
     display: block;
     content: "";
     top: 0;
@@ -225,6 +211,12 @@
       transition: transform var(--transition-primary);
       transform: scaleY(1);
     }
+  }
+
+  // メニューがフォーカスされたときのスタイル
+  .child.active {
+    transition: transform var(--transition-primary);
+    transform: scaleY(1);
   }
 }
 
