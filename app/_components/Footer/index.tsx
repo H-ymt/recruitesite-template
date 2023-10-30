@@ -19,38 +19,54 @@ export default function Footer() {
 
         <nav className={styles.footerNav}>
           <ul className={styles.list}>
-            <li>
-              <Link href="/about">企業情報</Link>
+            <li className={styles.item}>
+              <Link className={styles.link} href="/about">
+                企業情報
+              </Link>
             </li>
-            <li>
-              <Link href="/new-graduates">新卒採用</Link>
+            <li className={styles.item}>
+              <Link className={styles.link} href="/new-graduates">
+                新卒採用
+              </Link>
             </li>
-            <li>
-              <Link href="/flow">選考フロー</Link>
+            <li className={styles.item}>
+              <Link className={styles.link} href="/flow">
+                選考フロー
+              </Link>
             </li>
-            <li>
-              <Link href="/interview">社員インタビュー</Link>
+            <li className={styles.item}>
+              <Link className={styles.link} href="/interview">
+                社員インタビュー
+              </Link>
             </li>
           </ul>
 
           <ul className={`${styles.list} ${styles.listParent}`}>
-            <li>職種から探す</li>
+            <li className={styles.item}>職種から探す</li>
             <li>
               <ul className={styles.listChild}>
-                <li>
-                  <Link href="/position/engineer">エンジニア</Link>
+                <li className={styles.item}>
+                  <Link className={styles.link} href="/position/engineer">
+                    エンジニア
+                  </Link>
                 </li>
 
-                <li>
-                  <Link href="/position/designer">Webデザイナー</Link>
+                <li className={styles.item}>
+                  <Link className={styles.link} href="/position/designer">
+                    Webデザイナー
+                  </Link>
                 </li>
 
-                <li>
-                  <Link href="/position/customer">カスタマー</Link>
+                <li className={styles.item}>
+                  <Link className={styles.link} href="/position/customer">
+                    カスタマー
+                  </Link>
                 </li>
 
-                <li>
-                  <Link href="/position/crm">CRM</Link>
+                <li className={styles.item}>
+                  <Link className={styles.link} href="/position/crm">
+                    CRM
+                  </Link>
                 </li>
               </ul>
             </li>

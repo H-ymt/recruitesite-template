@@ -35,6 +35,12 @@
   gap: 16px;
 }
 
+.item {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
 .listParent {
   display: flex;
   flex-direction: column;
@@ -42,6 +48,14 @@
 }
 
 .listChild {
+  display: inline-flex;
+  flex-direction: column;
   padding-left: 4px;
   font-weight: 500;
+  font-size: 14px;
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
