@@ -3,7 +3,7 @@
 import Link from "next/link";
 import styles from "./index.module.scss";
 import { Menu as LucideMenu, X, Plus, Minus } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function Menu() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -15,6 +15,21 @@ export default function Menu() {
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const parentRef = useRef<HTMLDivElement>(null);
+  const childRef = useRef<HTMLDivElement>(null);
+
+  const handleFocus = () => {
+    if (childRef.current) {
+      childRef.current.className = `${childRef.current.className} ${styles.active}`;
+    }
+  };
+
+  const handleBlur = () => {
+    if (childRef.current) {
+      childRef.current.className = childRef.current.className.replace(styles.active, "");
+    }
   };
 
   return (
@@ -34,12 +49,19 @@ export default function Menu() {
       <nav className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
         <div className={styles.list}>
           <div className={styles.item}>
-            <Link href="/about">企業情報</Link>
+            <Link className={styles.navLink} href="/about">
+              企業情報
+            </Link>
           </div>
 
-          <div className={`${styles.item} ${styles.parent}`} role="button">
-            <div className={styles.parentInner}>
-              <div>職種から探す</div>
+          <div ref={parentRef} className={`${styles.item} ${styles.parent}`}>
+            <button
+              type="button"
+              className={`${styles.parentInner} ${styles.parentLinkButton}`}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+            >
+              <span>職種から探す</span>
 
               <Plus
                 size={14}
@@ -51,7 +73,7 @@ export default function Menu() {
                 strokeWidth={2}
                 className={`${styles.minusIcon} ${isMenuOpen ? "" : styles.hidden}`}
               />
-            </div>
+            </button>
             <div
               className={`${styles.parentInner} ${styles.mobile}`}
               onClick={handleMenuToggle}
@@ -70,34 +92,51 @@ export default function Menu() {
               />
             </div>
 
-            <div className={`${styles.child} ${isMenuOpen ? styles.active : ""}`}>
+            <div
+              ref={childRef}
+              className={`${styles.child} ${isMenuOpen ? styles.active : ""}`}
+            >
               <ul className={styles.childList}>
                 <li className={styles.childItem}>
-                  <Link href="/position/engineer">エンジニア</Link>
+                  <Link className={styles.navLink} href="/position/engineer">
+                    エンジニア
+                  </Link>
                 </li>
                 <li className={styles.childItem}>
-                  <Link href="/position/designer">Webデザイナー</Link>
+                  <Link className={styles.navLink} href="/position/designer">
+                    Webデザイナー
+                  </Link>
                 </li>
                 <li className={styles.childItem}>
-                  <Link href="/position/customer">カスタマー</Link>
+                  <Link className={styles.navLink} href="/position/customer">
+                    カスタマー
+                  </Link>
                 </li>
                 <li className={styles.childItem}>
-                  <Link href="/position/crm">CRM</Link>
+                  <Link className={styles.navLink} href="/position/crm">
+                    CRM
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
 
           <div className={styles.item}>
-            <Link href="/new-graduates">新卒採用</Link>
+            <Link className={styles.navLink} href="/new-graduates">
+              新卒採用
+            </Link>
           </div>
 
           <div className={styles.item}>
-            <Link href="/flow">選考フロー</Link>
+            <Link className={styles.navLink} href="/flow">
+              選考フロー
+            </Link>
           </div>
 
           <div className={styles.item}>
-            <Link href="/interview">社員インタビュー</Link>
+            <Link className={styles.navLink} href="/interview">
+              社員インタビュー
+            </Link>
           </div>
         </div>
       </nav>

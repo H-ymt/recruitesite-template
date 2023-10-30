@@ -58,6 +58,7 @@
   flex-direction: column;
   width: 100%;
   padding: 24px 16px;
+  background: var(--bg-primary);
 
   @include mq(md) {
     flex-direction: row;
@@ -168,6 +169,29 @@
       background: #171717e4;
       transition: transform var(--transition-primary);
     }
+  }
+}
+
+@include mq(md) {
+  .child.focus {
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+    transform: scaleY(1);
+    transform-origin: top center;
+    transition: transform var(--transition-primary);
+  }
+
+  .child.focus::before {
+    display: block;
+    content: "";
+    top: 0;
+    width: 95%;
+    margin-inline: auto;
+    height: 1px;
+    padding: 0 16px;
+    background: #171717e4;
+    transition: transform var(--transition-primary);
   }
 }
 
