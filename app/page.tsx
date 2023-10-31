@@ -42,7 +42,8 @@ export default async function Page() {
           <PrimaryButton href="/">エントリーはこちら</PrimaryButton>
         </div>
       </div>
-      <Sheet>
+
+      <div className={styles.wrapper}>
         <section className={styles.newGraduateSection}>
           <h2 className={styles.sectionTitle}>
             <span className={styles.sectionTitleEn}>New&ensp;graduates</span>
@@ -285,7 +286,7 @@ export default async function Page() {
             </div>
           </div>
         </section>
-      </Sheet>
+      </div>
     </>
   );
 }
