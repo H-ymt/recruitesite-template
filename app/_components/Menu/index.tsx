@@ -48,7 +48,7 @@ export default function Menu() {
       <nav className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
         <div className={styles.list}>
           <div className={styles.item}>
-            <Link className={styles.navLink} href="/about">
+            <Link onClick={toggleIsOpen} className={styles.navLink} href="/about">
               企業情報
             </Link>
           </div>
@@ -72,6 +72,7 @@ export default function Menu() {
                 className={`${styles.minusIcon} ${isMenuOpen ? "" : styles.hidden}`}
               />
             </button>
+
             <div
               className={`${styles.parentInner} ${styles.mobile}`}
               onClick={handleMenuToggle}
@@ -97,6 +98,7 @@ export default function Menu() {
               <ul className={styles.childList}>
                 <li className={styles.childItem}>
                   <Link
+                    onClick={toggleIsOpen}
                     onFocus={handleFocus}
                     onBlur={handleBlur}
                     className={styles.navLink}
@@ -107,6 +109,7 @@ export default function Menu() {
                 </li>
                 <li className={styles.childItem}>
                   <Link
+                    onClick={toggleIsOpen}
                     onFocus={handleFocus}
                     onBlur={handleBlur}
                     className={styles.navLink}
@@ -117,6 +120,7 @@ export default function Menu() {
                 </li>
                 <li className={styles.childItem}>
                   <Link
+                    onClick={toggleIsOpen}
                     onFocus={handleFocus}
                     onBlur={handleBlur}
                     className={styles.navLink}
@@ -127,6 +131,7 @@ export default function Menu() {
                 </li>
                 <li className={styles.childItem}>
                   <Link
+                    onClick={toggleIsOpen}
                     onFocus={handleFocus}
                     onBlur={handleBlur}
                     className={styles.navLink}
@@ -140,19 +145,19 @@ export default function Menu() {
           </div>
 
           <div className={styles.item}>
-            <Link className={styles.navLink} href="/new-graduates">
+            <Link onClick={toggleIsOpen} className={styles.navLink} href="/new-graduates">
               新卒採用
             </Link>
           </div>
 
           <div className={styles.item}>
-            <Link className={styles.navLink} href="/flow">
+            <Link onClick={toggleIsOpen} className={styles.navLink} href="/flow">
               選考フロー
             </Link>
           </div>
 
           <div className={styles.item}>
-            <Link className={styles.navLink} href="/interview">
+            <Link onClick={toggleIsOpen} className={styles.navLink} href="/interview">
               社員インタビュー
             </Link>
           </div>
