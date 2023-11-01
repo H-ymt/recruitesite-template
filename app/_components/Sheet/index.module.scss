@@ -7,7 +7,10 @@
   padding-bottom: 50px;
 
   @include mq(sm) {
-    width: calc(100% - 72px);
+    width: calc(100% - 96px);
+  }
+
+  @include mq(md) {
     max-width: 1100px;
     padding-top: 120px;
     padding-bottom: 64px;
