@@ -20,7 +20,7 @@ export default async function Page() {
         <div className={styles.heroHead}>
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>
-              モダンなフロントエンドで
+              モダンフロントエンドで
               <br />
               Webの世界を変える
             </h1>
