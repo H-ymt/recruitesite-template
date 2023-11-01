@@ -3,13 +3,13 @@
 .sheet {
   width: calc(100% - 48px);
   margin-inline: auto;
-  padding-top: 32px;
+  padding-top: 72px;
   padding-bottom: 50px;
 
   @include mq(sm) {
     width: calc(100% - 72px);
     max-width: 1100px;
-    padding-top: 48px;
+    padding-top: 120px;
     padding-bottom: 64px;
   }
 }

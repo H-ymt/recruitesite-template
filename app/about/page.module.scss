@@ -1,0 +1,95 @@
+@import "@/app/styles/breakpoint";
+
+.aboutTitle {
+  padding-bottom: 16px;
+  text-align: center;
+  font-size: 22px;
+
+  @include mq(md) {
+    font-size: 36px;
+  }
+}
+
+.heading {
+  display: grid;
+  place-items: center;
+  gap: 24px;
+  padding-bottom: 80px;
+}
+
+.headingText {
+  font-size: 18px;
+  line-height: 1.6;
+
+  @include mq(md) {
+    text-align: center;
+  }
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.sectionTitle {
+  padding-bottom: 28px;
+
+  @include mq(md) {
+    font-size: 30px;
+  }
+}
+
+.text {
+  font-weight: 500;
+}
+
+.jamstackList {
+  display: flex;
+  flex-direction: column;
+}
+
+.jamstackList + .jamstackList {
+  margin-top: 28px;
+}
+
+.jamstackTerm {
+  padding-bottom: 8px;
+  font-size: 18px;
+}
+
+.jamstackDescription {
+  font-weight: 400;
+}
+
+.welfareList {
+  display: grid;
+  width: min(100%, 300px);
+  margin-inline: auto;
+  gap: 48px;
+
+  @include mq(sm) {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.welfareItem {
+  display: grid;
+  grid-template-rows: subgrid;
+  align-items: start;
+  grid-row: span 2;
+  gap: 8px;
+}
+
+.welfareHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.welfareDescription {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 400;
+}
