@@ -37,6 +37,7 @@ export default function AboutSwiper() {
     <Swiper
       modules={[Navigation, Autoplay]}
       breakpoints={slidesPerView}
+      slidesPerView={"auto"}
       centeredSlides={true}
       navigation
       loop={true}
