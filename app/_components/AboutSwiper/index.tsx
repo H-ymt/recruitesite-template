@@ -11,19 +11,32 @@ const images = [
   "/slide-development-2.png",
   "/slide-development-3.png",
   "/slide-development-4.png",
+  "/slide-development-5.png",
+  "/slide-development-6.png",
 ];
 
 export default function AboutSwiper() {
+  const slidesPerView = {
+    0: {
+      slidesPerView: 1.3,
+      spaceBetween: 10,
+    },
+    576: {
+      slidesPerView: 1.8,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 2.4,
+    },
+    1024: {
+      slidesPerView: 3.5,
+    },
+  };
+
   return (
     <Swiper
       modules={[Navigation, Autoplay]}
-      spaceBetween={10}
-      slidesPerView={1.3}
-      breakpoints={{
-        768: {
-          slidesPerView: 2.5,
-        },
-      }}
+      breakpoints={slidesPerView}
       centeredSlides={true}
       navigation
       loop={true}
