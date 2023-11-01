@@ -13,6 +13,7 @@ const images = [
   "/slide-development-4.png",
   "/slide-development-5.png",
   "/slide-development-6.png",
+  "/slide-development-7.png",
 ];
 
 export default function AboutSwiper() {
