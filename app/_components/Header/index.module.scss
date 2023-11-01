@@ -3,7 +3,13 @@
 .header {
   z-index: var(--zIndex-header);
   position: sticky;
-  top: 0;
+  top: 0px;
+
+  @include mq(md) {
+    top: 20px;
+    width: calc(100% - 32px);
+    margin-inline: auto;
+  }
 }
 
 .inner {
@@ -16,6 +22,7 @@
   margin-inline: auto;
   padding: 0 24px;
   background: var(--bg-primary);
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.06);
 
   @include mq(md) {
     border-radius: var(--borderRadius-md);
