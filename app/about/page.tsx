@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Sheet from "../_components/Sheet";
 import styles from "./page.module.scss";
+import AboutSwiper from "../_components/AboutSwiper";
 
 export default function Page() {
   return (
@@ -113,6 +116,14 @@ export default function Page() {
             </dl>
           </div>
         </section>
+
+        <div className={styles.swiper}>
+          <p className={styles.swiperText}>
+            Let&apos;s&ensp;change&ensp;the&ensp;
+            <span className={styles.swiperTextBreak}>web&ensp;industry&ensp;with&ensp;us!</span>
+          </p>
+          <AboutSwiper />
+        </div>
       </Sheet>
     </>
   );

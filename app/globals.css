@@ -71,6 +71,12 @@ img {
   height: auto;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
 p {
   text-align: justify;
 }

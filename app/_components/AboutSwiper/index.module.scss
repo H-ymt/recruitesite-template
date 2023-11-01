@@ -1,0 +1,34 @@
+@import "@/app/styles/breakpoint";
+
+.slide {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.slideWrapper {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.slideImage {
+  padding: 8px;
+  border: 1px solid var(--borderColor-gray);
+  border-radius: var(--borderRadius-md);
+
+  @include mq(sm) {
+    padding: 20px;
+  }
+}
+
+.active {
+  transform: scale(1);
+  transition: transform var(--transition-primary);
+}
+
+.notActive {
+  transform: scale(0.9);
+  transition: transform var(--transition-primary);
+}

@@ -93,3 +93,26 @@
   font-size: 14px;
   font-weight: 400;
 }
+
+.swiper {
+  padding: 40px 0;
+}
+
+.swiperText {
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+
+  @include mq(md) {
+    padding-bottom: 56px;
+    font-size: 36px;
+  }
+}
+
+.swiperTextBreak {
+  display: block;
+
+  @include mq(md) {
+    display: inline-block;
+  }
+}

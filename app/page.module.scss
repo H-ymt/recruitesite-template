@@ -159,7 +159,7 @@
   gap: 24px;
   flex-direction: column;
 
-  @include mq(md) {
+  @include mq(sm) {
     flex-direction: row;
   }
 }
