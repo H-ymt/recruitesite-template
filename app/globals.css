@@ -18,6 +18,7 @@
   --transition-slowly: 0.4s ease-out;
 
   --headerHeight: 70px;
+  --maxWidth: 1100px;
 
   --zIndex-header: 100;
 }
