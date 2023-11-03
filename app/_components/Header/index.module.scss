@@ -6,7 +6,7 @@
   top: 0px;
 
   @include mq(md) {
-    top: 20px;
+    top: 30px;
     width: calc(100% - 32px);
     margin-inline: auto;
   }
@@ -33,9 +33,8 @@
 @include mq(md) {
   @media (hover: hover) {
     .inner:hover {
-      border-bottom-right-radius: unset;
-      border-bottom-left-radius: unset;
-      transition: border-radius 0.1s ease;
+      border-radius: unset;
+      transition: border-radius var(--transition-slowly);
     }
   }
 }

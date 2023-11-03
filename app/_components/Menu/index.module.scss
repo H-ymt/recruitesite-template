@@ -33,9 +33,9 @@
 .nav.open {
   visibility: visible;
   opacity: 1;
-  border-bottom-right-radius: var(--borderRadius-md);
-  border-bottom-left-radius: var(--borderRadius-md);
-  transition: opacity var(--transition-primary);
+  border-bottom-right-radius: unset;
+  border-bottom-left-radius: unset;
+  transition: opacity var(--transition-slowly);
 }
 
 .nav.open::before {
@@ -235,8 +235,8 @@
     padding: 28px 0;
     text-align: center;
     background: var(--bg-primary);
-    border-bottom-right-radius: var(--borderRadius-md);
-    border-bottom-left-radius: var(--borderRadius-md);
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: unset;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.06);
   }
 }
