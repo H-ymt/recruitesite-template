@@ -9,7 +9,9 @@ export default function Page() {
   return (
     <>
       <Sheet>
-        <h1 className={styles.aboutTitle}>高速で安全なサイトを構築する</h1>
+        <h1 className={styles.aboutTitle}>
+          Jamstackを使って<span>高速で安全なサイトを構築する</span>
+        </h1>
         <div className={styles.heading}>
           <Image
             src="/about.svg"

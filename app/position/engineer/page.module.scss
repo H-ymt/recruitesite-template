@@ -1,0 +1,31 @@
+@import "@/app/styles/breakpoint";
+
+.sideNavigation {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    grid-area: 1/1 / auto/span 3;
+  }
+}
+
+.sideNavigationList {
+  position: sticky;
+  top: 200px;
+}
+
+.sideNavigationItem.active a {
+  color: royalblue;
+}
+
+.mainContent {
+  grid-area: auto/1 / auto/span 12;
+
+  @include mq(md) {
+    grid-area: 1/4 / auto/span 12;
+  }
+}
+
+.mainContent section + section {
+  padding: 15rem 0;
+}
