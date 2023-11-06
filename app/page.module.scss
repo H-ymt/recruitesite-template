@@ -12,8 +12,10 @@
   gap: 36px;
 
   @include mq(md) {
-    width: calc(100% - 96px);
-    height: calc(100vh - 94px);
+    width: calc(100% - 80px);
+    padding-top: 400px;
+    padding-bottom: 300px;
+    height: 60vh;
   }
 }
 
@@ -31,23 +33,9 @@
   }
 }
 
-.hero::before {
-  display: inline-block;
-  top: 0;
-  left: -160px;
-  z-index: 0;
-  position: absolute;
-  content: url("/hero-bg.svg");
-  object-fit: contain;
-
-  @include mq(md) {
-    left: -80px;
-    top: 40px;
-  }
-}
-
 .heroTitle {
   display: inline-block;
+  text-align: center;
   font-size: 22px;
 
   @include mq(sm) {
@@ -55,7 +43,12 @@
     font-size: 28px;
   }
 
+  @include mq(md) {
+    text-align: left;
+  }
+
   @include mq(lg) {
+    text-align: left;
     font-size: 36px;
   }
 }
@@ -66,6 +59,7 @@
 
 .heroText {
   display: none;
+  font-weight: 500;
 
   @include mq(md) {
     display: block;

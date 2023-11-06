@@ -19,23 +19,12 @@ export default async function Page() {
       <div className={styles.hero}>
         <div className={styles.heroHead}>
           <div className={styles.heroContent}>
-            <h1 className={styles.heroTitle}>
-              モダンフロントエンドで
-              <br />
-              Webの世界を変える
-            </h1>
+            <h1 className={styles.heroTitle}>Developing websites using modern technologies.</h1>
             <p className={styles.heroText}>
               私たちはモダンなフロントエンド技術とヘッドレスCMSを駆使して、高速かつセキュアでスケーラブルなWebサイトを構築します。
-              あなたのアイデアとスキルで、私たちと一緒に未来を創り上げましょう。
             </p>
           </div>
-          <Image
-            className={styles.heroImage}
-            src="/hero.svg"
-            width="556"
-            height="400"
-            alt=""
-          />
+          <Image className={styles.heroImage} src="/hero.svg" width="556" height="400" alt="" />
         </div>
 
         <div className={styles.heroButtonGroup}>
@@ -52,18 +41,12 @@ export default async function Page() {
 
           <div className={styles.newGraduateContent}>
             <div className={styles.newGraduateImage}>
-              <Image
-                src="/new-graduate.svg"
-                alt=""
-                width="1027"
-                height="799"
-                decoding="async"
-              />
+              <Image src="/new-graduate.svg" alt="" width="1027" height="799" decoding="async" />
             </div>
 
             <div className={styles.newGraduateText}>
               <p>
-                私たちの会社は、あなたが学んだ知識を活かし、新たな挑戦を通じて成長していく場所です。アイデアと情熱を大切にし、それを活かす機会を大切にします。私たちと一緒に、未来を創造しましょう。
+                私たちの会社は、あなたが学んだ知識を活かし、新たな挑戦を通じて成長していく場所です。アイデアと情熱を大切にし、それを活かす機会を大切にします。
               </p>
               <PrimaryButton href="/new-graduates">新卒採用</PrimaryButton>
             </div>
@@ -143,13 +126,7 @@ export default async function Page() {
             </div>
 
             <div className={styles.stackIcon}>
-              <Image
-                src="/logo_vue.png"
-                width="56"
-                height="56"
-                alt="Vue"
-                aria-hidden="true"
-              />
+              <Image src="/logo_vue.png" width="56" height="56" alt="Vue" aria-hidden="true" />
               <span className={styles.stackName}>Vue.js</span>
             </div>
 
@@ -165,24 +142,12 @@ export default async function Page() {
             </div>
 
             <div className={styles.stackIcon}>
-              <Image
-                src="/logo_nuxt.png"
-                width="56"
-                height="56"
-                alt="Nuxt.js"
-                aria-hidden="true"
-              />
+              <Image src="/logo_nuxt.png" width="56" height="56" alt="Nuxt.js" aria-hidden="true" />
               <span className={styles.stackName}>Nuxt.js</span>
             </div>
 
             <div className={styles.stackIcon}>
-              <Image
-                src="/icon_astro.png"
-                width="56"
-                height="56"
-                alt="Astro"
-                aria-hidden="true"
-              />
+              <Image src="/icon_astro.png" width="56" height="56" alt="Astro" aria-hidden="true" />
               <span className={styles.stackName}>Astro</span>
             </div>
 
@@ -198,24 +163,12 @@ export default async function Page() {
             </div>
 
             <div className={styles.stackIcon}>
-              <Image
-                src="/logo_bun.png"
-                width="56"
-                height="56"
-                alt="Bun"
-                aria-hidden="true"
-              />
+              <Image src="/logo_bun.png" width="56" height="56" alt="Bun" aria-hidden="true" />
               <span className={styles.stackName}>Bun</span>
             </div>
 
             <div className={styles.stackIcon}>
-              <Image
-                src="/logo_pnpm.png"
-                width="56"
-                height="56"
-                alt="pnpm"
-                aria-hidden="true"
-              />
+              <Image src="/logo_pnpm.png" width="56" height="56" alt="pnpm" aria-hidden="true" />
               <span className={styles.stackName}>pnpm</span>
             </div>
 
