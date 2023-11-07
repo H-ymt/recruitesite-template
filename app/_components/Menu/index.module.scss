@@ -1,259 +1,104 @@
 @import "@/app/styles/breakpoint";
 
-.button {
-  display: flex;
-  align-items: center;
-  color: inherit;
+.navigationMenuRoot {
+  display: none;
 
   @include mq(md) {
-    display: none;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+    position: relative;
+    width: fit-content;
   }
 }
 
-.nav {
-  visibility: hidden;
-  opacity: 0;
+.navigationMenuList {
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+
+.navigationMenuItem {
+  position: relative;
+}
+
+.navigationMenuItem a {
+  padding: 8px 10px;
+  border-radius: var(--borderRadius-xs);
+}
+
+@media (hover: hover) {
+  .navigationMenuItem a:hover {
+    background: #3333330b;
+  }
+}
+
+.navigationMenuItem.isActive a {
+  background: #3333331a;
+}
+
+.navigationMenuTrigger {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navigationMenuLink {
+  text-decoration: none;
+}
+.navigationMenuLink[data-active] {
+  text-decoration: "underline";
+}
+
+.navigationMenuContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: var(--headerHeight);
-  z-index: var(--zIndex-header);
+  top: 36px;
   left: 0;
-  width: 100%;
-  transition: opacity var(--transition-primary);
-
-  @include mq(md) {
-    display: block;
-    visibility: visible;
-    opacity: 1;
-    position: unset;
-    inset: unset;
-    width: auto;
-  }
-}
-
-.nav.open {
-  visibility: visible;
-  opacity: 1;
-  border-bottom-right-radius: unset;
-  border-bottom-left-radius: unset;
-  transition: opacity var(--transition-slowly);
-}
-
-.nav.open::before {
-  display: block;
-  position: absolute;
-  content: "";
-  width: 92%;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 1px;
-  background: var(--color-text-primary);
-
-  @include mq(md) {
-    display: none;
-  }
-}
-
-.list {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 24px 16px;
-  background: var(--bg-primary);
-
-  @include mq(md) {
-    flex-direction: row;
-    padding: 0;
-    border: none;
-  }
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  padding: 10px 12px;
-  font-size: 16px;
-  transition: opacity var(--transition-primary);
-  cursor: pointer;
-
-  @include mq(md) {
-    height: var(--headerHeight);
-    gap: 4px;
-    padding: 0 12px;
-    font-size: 14px;
-  }
-}
-
-@media (hover: hover) {
-  .item:hover {
-    opacity: 0.7;
-    transition: opacity var(--transition-primary);
-  }
-}
-
-// ****
-// プラス・マイナスアイコンのスタイル
-// ****
-.parent {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  @include mq(md) {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
-.minusIcon {
-  @include mq(md) {
-    display: none;
-  }
-}
-
-.plusIcon.hidden,
-.minusIcon.hidden {
-  display: none;
-}
-
-@include mq(md) {
-  @media (hover: hover) {
-    .parent:hover .plusIcon {
-      display: none;
-    }
-
-    .parent:hover .minusIcon {
-      display: block;
-    }
-  }
-}
-
-// ****
-// ドロップダウンメニューのスタイル
-// ****
-.parentInner {
-  display: none;
-
-  @include mq(md) {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-}
-
-.parentInner.mobile {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  @include mq(md) {
-    display: none;
-  }
-}
-
-@media (hover: hover) {
-  .parent:hover {
-    opacity: 1;
-  }
-}
-
-@include mq(md) {
-  @media (hover: hover) {
-    .parent:hover .child::before {
-      display: block;
-      content: "";
-      top: 0;
-      width: 95%;
-      margin-inline: auto;
-      height: 1px;
-      padding: 0 16px;
-      background: #171717e4;
-      transition: transform var(--transition-primary);
-    }
-  }
-
-  .child.active::before {
-    display: block;
-    content: "";
-    top: 0;
-    width: 95%;
-    margin-inline: auto;
-    height: 1px;
-    padding: 0 16px;
-    background: #171717e4;
-    transition: transform var(--transition-primary);
-  }
-}
-
-.child {
-  width: 100%;
-  height: 0;
+  width: 90%;
+  padding: 18px 10px;
+  border-radius: var(--borderRadius-md);
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.06);
+  background-color: var(--bg-primary);
+  transition: transform 0.3s ease;
   transform: scaleY(0);
-  transition: transform var(--transition-primary);
-  transform-origin: center top;
-
-  @include mq(md) {
-    position: absolute;
-    top: calc(var(--headerHeight) - 1px);
-    left: 0;
-    width: 100%;
-  }
 }
 
-.child.active {
-  visibility: visible;
-  opacity: 1;
-  height: 100%;
+[data-state="open"] > .navigationMenuContent {
   transform: scaleY(1);
-  transform-origin: top center;
-  transition: transform var(--transition-primary);
+  transition: transform 0.3s ease;
 }
 
-@include mq(md) {
-  @media (hover: hover) {
-    .parent:hover .child {
-      transition: transform var(--transition-primary);
-      transform: scaleY(1);
-    }
-  }
-
-  // メニューがフォーカスされたときのスタイル
-  .child.active {
-    transition: transform var(--transition-primary);
-    transform: scaleY(1);
-  }
+.navigationMenuContentList {
+  display: flex;
+  gap: 18px;
 }
 
-.childList {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding-top: 16px;
-
-  @include mq(md) {
-    display: flex;
-    justify-content: center;
-    gap: 4px;
-    padding: 28px 0;
-    text-align: center;
-    background: var(--bg-primary);
-    border-bottom-right-radius: unset;
-    border-bottom-left-radius: unset;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.06);
-  }
+.navigationMenuContentItem a {
+  display: inline-block;
+  padding: 4px 6px;
 }
 
-.childItem {
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 400;
-
-  @include mq(md) {
-    font-weight: 700;
-  }
+.navigationMenuContentItem.isActive {
+  border-radius: var(--borderRadius-xs);
+  background: #3333331a;
 }
 
 @media (hover: hover) {
-  .childItem:hover {
-    opacity: 0.8;
-    transition: opacity var(--transition-primary);
+  .navigationMenuContentItem a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2.5px;
   }
+}
+
+.chevron {
+  position: relative;
+  top: 1px;
+  transition: transform 0.3s ease;
+}
+
+[data-state="open"] > .chevron {
+  transform: rotate(-180deg);
 }
