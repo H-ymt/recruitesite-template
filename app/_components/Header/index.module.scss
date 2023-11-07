@@ -2,11 +2,8 @@
 
 .header {
   z-index: var(--zIndex-header);
-  position: sticky;
-  top: 0px;
 
   @include mq(md) {
-    top: 30px;
     width: calc(100% - 32px);
     margin-inline: auto;
   }
@@ -20,9 +17,7 @@
   max-width: 1024px;
   height: var(--headerHeight);
   margin-inline: auto;
-  padding: 0 24px;
-  background: var(--bg-primary);
-  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.06);
+  padding: 16px 24px;
 
   @include mq(md) {
     border-radius: var(--borderRadius-md);
@@ -50,14 +45,5 @@
   .logo:hover {
     opacity: 0.7;
     transition: opacity 0.2s ease-out;
-  }
-}
-
-.logoText {
-  font-size: 14px;
-  font-weight: 600;
-
-  @include mq(md) {
-    font-size: 12px;
   }
 }

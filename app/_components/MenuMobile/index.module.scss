@@ -1,0 +1,97 @@
+@import "@/app/styles/breakpoint";
+
+.handleMenuButton {
+  display: grid;
+  place-items: center;
+  position: relative;
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.overlay {
+  display: none;
+}
+
+.overlay.isOpen {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #efeded26;
+}
+
+.menu {
+  display: none;
+}
+
+.menu.isOpen {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: calc(var(--headerHeight) - 16px);
+  right: 24px;
+  width: min(100%, 260px);
+  background-color: var(--bg-primary);
+  box-shadow: 0 4px 10px rgba(208, 205, 205, 0.45);
+  border-radius: var(--borderRadius-sm);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 16px;
+}
+
+.link,
+.menuTrigger {
+  display: block;
+  padding: 4px 0;
+}
+
+.menuTrigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.menuContent {
+  display: none;
+  padding: 4px 6px;
+  font-size: 14px;
+  transition: transform var(--transition-primary);
+}
+
+.menuContent.isOpen {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: auto;
+  transition: transform var(--transition-primary);
+}
+
+.menuContent .link {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility var(--transition-slowly), opacity var(--transition-slowly);
+}
+
+.menuContent.isOpen .link {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility var(--transition-slowly), opacity var(--transition-slowly);
+}
+
+.chevron {
+  transition: transform var(--transition-primary);
+}
+
+.chevron.isRouted {
+  transform: rotate(-180deg);
+  transition: transform var(--transition-primary);
+}

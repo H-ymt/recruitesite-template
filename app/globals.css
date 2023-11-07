@@ -10,6 +10,7 @@
 
   --borderColor-gray: #d1d1d1;
 
+  --borderRadius-xs: 4px;
   --borderRadius-sm: 8px;
   --borderRadius-md: 12px;
   --borderRadius-lg: 28px;
@@ -17,7 +18,7 @@
   --transition-primary: 0.2s ease-out;
   --transition-slowly: 0.4s ease-out;
 
-  --headerHeight: 70px;
+  --headerHeight: 86px;
   --maxWidth: 1100px;
 
   --zIndex-header: 100;
@@ -42,7 +43,6 @@ body {
 body {
   font-weight: 600;
   font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
-  letter-spacing: 0.06em;
 }
 
 ul,
