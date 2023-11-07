@@ -1,8 +1,15 @@
 @import "@/app/styles/breakpoint";
 
 .header {
+  position: sticky;
   z-index: var(--zIndex-header);
+  top: 0;
+  background: var(--bg-primary);
   border-bottom: 1px solid #eeecec;
+}
+
+.header.isScrolled {
+  box-shadow: 0px 1px 16px rgb(248, 247, 247);
 }
 
 .inner {
