@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Sheet from "../_components/Sheet";
 import styles from "./page.module.scss";
-import AboutSwiper from "../_components/AboutSwiper";
+import BasicSlider from "../_components/BasicSlider";
 
 export default function Page() {
   return (
@@ -13,13 +13,7 @@ export default function Page() {
           Jamstackを使って<span>高速で安全なサイトを構築する</span>
         </h1>
         <div className={styles.heading}>
-          <Image
-            src="/about.svg"
-            alt=""
-            width={400}
-            height={400}
-            className={styles.heroImage}
-          />
+          <Image src="/about.svg" alt="" width={400} height={400} className={styles.heroImage} />
           <p className={styles.headingText}>
             私たちは2020年4月に創業した企業です。
             <br />
@@ -123,11 +117,9 @@ export default function Page() {
       <div className={styles.swiper}>
         <p className={styles.swiperText}>
           Let&apos;s&ensp;change&ensp;the&ensp;
-          <span className={styles.swiperTextBreak}>
-            web&ensp;industry&ensp;with&ensp;us!
-          </span>
+          <span className={styles.swiperTextBreak}>web&ensp;industry&ensp;with&ensp;us!</span>
         </p>
-        <AboutSwiper />
+        <BasicSlider />
       </div>
     </>
   );
