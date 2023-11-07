@@ -2,11 +2,7 @@
 
 .header {
   z-index: var(--zIndex-header);
-
-  @include mq(md) {
-    width: calc(100% - 32px);
-    margin-inline: auto;
-  }
+  border-bottom: 1px solid #eeecec;
 }
 
 .inner {
