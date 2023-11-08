@@ -6,14 +6,6 @@ import Sheet from "@/app/_components/Sheet";
 import SideNavigation from "@/app/_components/SideNavigation";
 import { useEffect, useId, useRef, useState } from "react";
 
-type Props = {
-  activeId: string;
-  aboutId: string;
-  capacityId: string;
-  summaryId: string;
-  otherId: string;
-};
-
 export default function Page() {
   const aboutId = useId();
   const capacityId = useId();
