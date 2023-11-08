@@ -1,0 +1,26 @@
+@import "@/app/styles/breakpoint";
+
+.sideNavigation {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    grid-area: 1/1 / auto/span 3;
+  }
+}
+
+.sideNavigationList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sideMenuLink {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.sideMenuLink.isActive {
+  color: var(--color-text-accent);
+}
