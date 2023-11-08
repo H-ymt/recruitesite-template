@@ -18,7 +18,11 @@ export default function Menu() {
 
     return (
       <NextLink href={href} passHref legacyBehavior>
-        <NavigationMenu.Link className={styles.navigationMenuLink} active={isActive} {...props} />
+        <NavigationMenu.Link
+          className={styles.navigationMenuLink}
+          active={isActive}
+          {...props}
+        />
       </NextLink>
     );
   };
@@ -88,7 +92,9 @@ export default function Menu() {
           </NavigationMenu.Item>
 
           <NavigationMenu.Item
-            className={`${styles.navigationMenuItem} ${pathname === "/" ? styles.isActive : ""}`}
+            className={`${styles.navigationMenuItem} ${
+              pathname === "/flow" ? styles.isActive : ""
+            }`}
           >
             <Link href="/flow">選考フロー</Link>
           </NavigationMenu.Item>
