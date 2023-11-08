@@ -1,5 +1,15 @@
 @import "@/app/styles/breakpoint";
 
+.pageTitle {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
+}
+
+.pageTitleEn {
+  font-size: 16px;
+}
+
 .sideNavigation {
   display: none;
 
@@ -11,10 +21,10 @@
 
 .sideNavigationList {
   position: sticky;
-  top: 200px;
+  top: calc(var(--headerHeight) + 10px);
 }
 
-.sideNavigationItem.active a {
+.sideMenuLink.isActive {
   color: royalblue;
 }
 
@@ -27,5 +37,9 @@
 }
 
 .mainContent section + section {
-  padding: 15rem 0;
+  margin: 5rem 0;
+}
+
+.section {
+  scroll-padding-top: var(--headerHeight);
 }
