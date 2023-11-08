@@ -1,16 +1,34 @@
 @import "@/app/styles/breakpoint";
 
-.pageTitle {
+.heading {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   padding-bottom: 60px;
+  text-align: center;
+
+  @include mq(md) {
+    padding-bottom: 80px;
+  }
+}
+
+.headingTitle {
+  display: flex;
+  flex-direction: column;
+}
+
+.headingText {
+  width: min(100%, 860px);
+  text-align: center;
 }
 
 .pageTitleEn {
   font-size: 16px;
 }
 
-.sideNavigation {
+.sideContent {
   display: none;
 
   @include mq(md) {
@@ -19,13 +37,9 @@
   }
 }
 
-.sideNavigationList {
+.sideNavigationWrapper {
   position: sticky;
-  top: calc(var(--headerHeight) + 10px);
-}
-
-.sideMenuLink.isActive {
-  color: royalblue;
+  top: calc(var(--headerHeight) + 24px);
 }
 
 .mainContent {
@@ -36,10 +50,20 @@
   }
 }
 
-.mainContent section + section {
-  margin: 5rem 0;
+.section {
+  padding-bottom: 56px;
+  scroll-padding-top: var(--headerHeight);
+
+  @include mq(md) {
+    padding-bottom: 160px;
+  }
 }
 
-.section {
-  scroll-padding-top: var(--headerHeight);
+.sectionTitle {
+  padding-bottom: 24px;
+}
+
+.sectionBody {
+  width: min(100%, 740px);
+  font-weight: 500;
 }

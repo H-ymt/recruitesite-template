@@ -1,7 +1,8 @@
 :root {
   --color-text-primary: #020202;
   --color-text-white: #fdfdfd;
-  --color-text-muted: #4f4f4f;
+  --color-text-muted: #7d7a7a;
+  --color-text-accent: #1184f0;
   --color-button-primary: #020202;
   --color-button-secondary: #3c4e91;
   --color-focus-outline: #0056ff;
@@ -43,7 +44,8 @@ body {
 
 body {
   font-weight: 600;
-  font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
+  font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans",
+    sans-serif;
 }
 
 ul,
