@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "markuplint": "markuplint \"./app/**/*.{jsx,tsx}\"",
-    "commit": "npm run git-cz"
+    "markuplint": "markuplint \"./app/**/*.{jsx,tsx}\""
   },
   "dependencies": {
     "@markuplint/jsx-parser": "^3.10.0",
@@ -29,7 +28,6 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
-    "git-cz": "^4.9.0",
     "markuplint": "^3.13.0",
     "modern-css-reset": "^1.4.0",
     "typescript": "^5"
