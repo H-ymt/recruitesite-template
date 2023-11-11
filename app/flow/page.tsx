@@ -1,17 +1,21 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import Sheet from "../_components/Sheet";
 import styles from "./page.module.scss";
 
-export default function Page() {
-  const intersectionRefs = [
+function useIntersectionRefs(): React.RefObject<HTMLLIElement>[] {
+  return [
     useRef<HTMLLIElement>(null),
     useRef<HTMLLIElement>(null),
     useRef<HTMLLIElement>(null),
     useRef<HTMLLIElement>(null),
     useRef<HTMLLIElement>(null),
   ];
+}
+
+export default function Page() {
+  const intersectionRefs = useIntersectionRefs();
 
   useEffect(() => {
     const observers = intersectionRefs.map(
@@ -45,7 +49,7 @@ export default function Page() {
         }
       });
     };
-  }, []);
+  }, [intersectionRefs]);
 
   return (
     <Sheet>
