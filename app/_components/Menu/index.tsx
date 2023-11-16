@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { usePathname } from "next/navigation";
-import NextLink from "next/link";
-import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { ChevronDown } from "lucide-react";
-import styles from "./index.module.scss";
+import { usePathname } from 'next/navigation';
+import NextLink from 'next/link';
+import * as NavigationMenu from '@radix-ui/react-navigation-menu';
+import { ChevronDown } from 'lucide-react';
+import styles from './index.module.scss';
 
 type Props = {
   href: string;
@@ -17,7 +17,11 @@ export default function Menu() {
     const isActive = pathname === href;
 
     return (
-      <NextLink href={href} passHref legacyBehavior>
+      <NextLink
+        href={href}
+        passHref
+        legacyBehavior
+      >
         <NavigationMenu.Link
           className={styles.navigationMenuLink}
           active={isActive}
@@ -33,10 +37,10 @@ export default function Menu() {
         <NavigationMenu.List className={styles.navigationMenuList}>
           <NavigationMenu.Item
             className={`${styles.navigationMenuItem} ${
-              pathname === "/about" ? styles.isActive : ""
+              pathname === '/about' ? styles.isActive : ''
             }`}
           >
-            <Link href="/about">企業情報</Link>
+            <Link href='/about'>企業情報</Link>
           </NavigationMenu.Item>
 
           <NavigationMenu.Item className={styles.navigationMenuItem}>
@@ -46,38 +50,38 @@ export default function Menu() {
                 size={16}
                 strokeWidth={2}
                 className={styles.chevron}
-                aria-hidden="true"
+                aria-hidden='true'
               />
             </NavigationMenu.Trigger>
             <NavigationMenu.Content className={styles.navigationMenuContent}>
               <ul className={styles.navigationMenuContentList}>
                 <li
                   className={`${styles.navigationMenuContentItem} ${
-                    pathname === "/position/engineer" ? styles.isActive : ""
+                    pathname === '/position/engineer' ? styles.isActive : ''
                   }`}
                 >
-                  <Link href="/position/engineer">エンジニア</Link>
+                  <Link href='/position/engineer'>エンジニア</Link>
                 </li>
                 <li
                   className={`${styles.navigationMenuContentItem} ${
-                    pathname === "/position/designer" ? styles.isActive : ""
+                    pathname === '/position/designer' ? styles.isActive : ''
                   }`}
                 >
-                  <Link href="/position/designer">Webデザイナー</Link>
+                  <Link href='/position/designer'>Webデザイナー</Link>
                 </li>
                 <li
                   className={`${styles.navigationMenuContentItem} ${
-                    pathname === "/position/customer" ? styles.isActive : ""
+                    pathname === '/position/customer' ? styles.isActive : ''
                   }`}
                 >
-                  <Link href="/position/customer">カスタマー</Link>
+                  <Link href='/position/customer'>カスタマー</Link>
                 </li>
                 <li
                   className={`${styles.navigationMenuContentItem} ${
-                    pathname === "/position/crm" ? styles.isActive : ""
+                    pathname === '/position/crm' ? styles.isActive : ''
                   }`}
                 >
-                  <Link href="/position/crm">CRM</Link>
+                  <Link href='/position/crm'>CRM</Link>
                 </li>
               </ul>
             </NavigationMenu.Content>
@@ -85,31 +89,31 @@ export default function Menu() {
 
           <NavigationMenu.Item
             className={`${styles.navigationMenuItem} ${
-              pathname === "/new-graduates" ? styles.isActive : ""
+              pathname === '/new-graduates' ? styles.isActive : ''
             }`}
           >
-            <Link href="/new-graduates">新卒採用</Link>
+            <Link href='/new-graduates'>新卒採用</Link>
           </NavigationMenu.Item>
 
           <NavigationMenu.Item
             className={`${styles.navigationMenuItem} ${
-              pathname === "/flow" ? styles.isActive : ""
+              pathname === '/flow' ? styles.isActive : ''
             }`}
           >
-            <Link href="/flow">選考フロー</Link>
+            <Link href='/flow'>選考フロー</Link>
           </NavigationMenu.Item>
 
           <NavigationMenu.Item
             className={`${styles.navigationMenuItem} ${
-              pathname === "/interview" ? styles.isActive : ""
+              pathname === '/interview' ? styles.isActive : ''
             }`}
           >
-            <Link href="/interview">社員インタビュー</Link>
+            <Link href='/interview'>社員インタビュー</Link>
           </NavigationMenu.Item>
         </NavigationMenu.List>
 
-        <div className="ViewportPosition">
-          <NavigationMenu.Viewport className="navigationMenuViewport" />
+        <div className='ViewportPosition'>
+          <NavigationMenu.Viewport className='navigationMenuViewport' />
         </div>
       </NavigationMenu.Root>
     </>

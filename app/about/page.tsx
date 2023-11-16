@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Sheet from "../_components/Sheet";
-import styles from "./page.module.scss";
-import BasicSlider from "../_components/BasicSlider";
+import Image from 'next/image';
+import BasicSlider from '../_components/BasicSlider';
+import Sheet from '../_components/Sheet';
+import styles from './page.module.scss';
 
 export default function Page() {
   return (
@@ -12,8 +12,15 @@ export default function Page() {
         <h1 className={styles.aboutTitle}>
           Jamstackを使って<span>高速で安全なサイトを構築する</span>
         </h1>
+
         <div className={styles.heading}>
-          <Image src="/about.svg" alt="" width={400} height={400} className={styles.heroImage} />
+          <Image
+            src='/about.svg'
+            alt=''
+            width={400}
+            height={400}
+            className={styles.heroImage}
+          />
           <p className={styles.headingText}>
             私たちは2020年4月に創業した企業です。
             <br />
@@ -65,7 +72,12 @@ export default function Page() {
               <div className={styles.welfareItem}>
                 <dt className={styles.welfareHead}>
                   <p>
-                    <Image src="/byod-image.svg" width="200" height="200" alt="" />
+                    <Image
+                      src='/byod-image.svg'
+                      width='200'
+                      height='200'
+                      alt=''
+                    />
                   </p>
                   <p>BYOD</p>
                 </dt>
@@ -77,7 +89,12 @@ export default function Page() {
               <div className={styles.welfareItem}>
                 <dt className={styles.welfareHead}>
                   <p>
-                    <Image src="/remote-work.svg" width="200" height="200" alt="" />
+                    <Image
+                      src='/remote-work.svg'
+                      width='200'
+                      height='200'
+                      alt=''
+                    />
                   </p>
                   <p>テレワーク手当</p>
                 </dt>
@@ -89,7 +106,12 @@ export default function Page() {
               <div className={styles.welfareItem}>
                 <dt className={styles.welfareHead}>
                   <p>
-                    <Image src="/cafe.svg" width="200" height="200" alt="" />
+                    <Image
+                      src='/cafe.svg'
+                      width='200'
+                      height='200'
+                      alt=''
+                    />
                   </p>
                   <p>社内カフェ</p>
                 </dt>
@@ -101,7 +123,12 @@ export default function Page() {
               <div className={styles.welfareItem}>
                 <dt className={styles.welfareHead}>
                   <p>
-                    <Image src="/vacation.svg" width="200" height="200" alt="" />
+                    <Image
+                      src='/vacation.svg'
+                      width='200'
+                      height='200'
+                      alt=''
+                    />
                   </p>
                   <p>土日祝日振替え休日</p>
                 </dt>

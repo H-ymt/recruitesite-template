@@ -1,6 +1,6 @@
-import { Article } from "@/app/_libs/microcms";
-import NewsListItem from "../NewsListItem";
-import styles from "./index.module.scss";
+import { Article } from '@/app/_libs/microcms';
+import NewsListItem from '../NewsListItem';
+import styles from './index.module.scss';
 
 type Props = {
   articles?: Article[];
@@ -16,7 +16,10 @@ export default function NewsList({ articles }: Props) {
   return (
     <ul className={styles.list}>
       {articles.map((article) => (
-        <NewsListItem key={article.id} news={article} />
+        <NewsListItem
+          key={article.id}
+          news={article}
+        />
       ))}
     </ul>
   );

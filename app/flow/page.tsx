@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import React, { useEffect, useMemo, useRef } from "react";
-import Sheet from "../_components/Sheet";
-import styles from "./page.module.scss";
+import React, { useEffect, useMemo, useRef } from 'react';
+import Sheet from '../_components/Sheet';
+import styles from './page.module.scss';
 
 function useIntersectionRefs(): React.RefObject<HTMLLIElement>[] {
   return [
@@ -31,9 +31,9 @@ export default function Page() {
             });
           },
           {
-            rootMargin: "-50%",
-          }
-        )
+            rootMargin: '-50%',
+          },
+        ),
     );
 
     intersectionRefs.forEach((ref, index) => {
@@ -66,26 +66,37 @@ export default function Page() {
       </div>
 
       <ol className={styles.flowList}>
-        <li className={styles.flowItem} ref={intersectionRefs[0]}>
+        <li
+          className={styles.flowItem}
+          ref={intersectionRefs[0]}
+        >
           <h2 className={styles.flowItemTitle}>01 応募（エントリー）</h2>
           <p className={styles.flowItemText}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, fuga.
           </p>
         </li>
-        <li className={styles.flowItem} ref={intersectionRefs[1]}>
+        <li
+          className={styles.flowItem}
+          ref={intersectionRefs[1]}
+        >
           <h2 className={styles.flowItemTitle}>02 書類選考</h2>
           <p className={styles.flowItemText}>Lorem ipsum dolor sit.</p>
         </li>
-        <li className={styles.flowItem} ref={intersectionRefs[2]}>
+        <li
+          className={styles.flowItem}
+          ref={intersectionRefs[2]}
+        >
           <h2 className={styles.flowItemTitle}>03 面接（原則2回）</h2>
           <p className={styles.flowItemText}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             <br />
-            Vel incidunt quam fuga repudiandae excepturi consectetur quidem
-            voluptatem aliquid.
+            Vel incidunt quam fuga repudiandae excepturi consectetur quidem voluptatem aliquid.
           </p>
         </li>
-        <li className={styles.flowItem} ref={intersectionRefs[3]}>
+        <li
+          className={styles.flowItem}
+          ref={intersectionRefs[3]}
+        >
           <h2 className={styles.flowItemTitle}>04 内定</h2>
           <p className={styles.flowItemText}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -93,7 +104,10 @@ export default function Page() {
             Soluta modi aperiam ipsum!
           </p>
         </li>
-        <li className={styles.flowItem} ref={intersectionRefs[4]}>
+        <li
+          className={styles.flowItem}
+          ref={intersectionRefs[4]}
+        >
           <h2 className={styles.flowItemTitle}>05 入社</h2>
           <p className={styles.flowItemText}>
             Lorem, ipsum dolor sit amet consectetur adipisicing.

@@ -1,6 +1,6 @@
-import Image from "next/image";
-import styles from "./index.module.scss";
-import Link from "next/link";
+import Image from 'next/image';
+import styles from './index.module.scss';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -8,34 +8,46 @@ export default function Footer() {
       <div className={styles.footerInner}>
         <div className={styles.logo}>
           <Image
-            src="/favicon.ico"
+            src='/favicon.ico'
             width={24}
             height={24}
-            alt=""
-            decoding="async"
-            aria-hidden="true"
+            alt=''
+            decoding='async'
+            aria-hidden='true'
           />
         </div>
 
         <nav className={styles.footerNav}>
           <ul className={styles.list}>
             <li className={styles.item}>
-              <Link className={styles.link} href="/about">
+              <Link
+                className={styles.link}
+                href='/about'
+              >
                 企業情報
               </Link>
             </li>
             <li className={styles.item}>
-              <Link className={styles.link} href="/new-graduates">
+              <Link
+                className={styles.link}
+                href='/new-graduates'
+              >
                 新卒採用
               </Link>
             </li>
             <li className={styles.item}>
-              <Link className={styles.link} href="/flow">
+              <Link
+                className={styles.link}
+                href='/flow'
+              >
                 選考フロー
               </Link>
             </li>
             <li className={styles.item}>
-              <Link className={styles.link} href="/interview">
+              <Link
+                className={styles.link}
+                href='/interview'
+              >
                 社員インタビュー
               </Link>
             </li>
@@ -46,25 +58,37 @@ export default function Footer() {
             <li>
               <ul className={styles.listChild}>
                 <li className={styles.item}>
-                  <Link className={styles.link} href="/position/engineer">
+                  <Link
+                    className={styles.link}
+                    href='/position/engineer'
+                  >
                     エンジニア
                   </Link>
                 </li>
 
                 <li className={styles.item}>
-                  <Link className={styles.link} href="/position/designer">
+                  <Link
+                    className={styles.link}
+                    href='/position/designer'
+                  >
                     Webデザイナー
                   </Link>
                 </li>
 
                 <li className={styles.item}>
-                  <Link className={styles.link} href="/position/customer">
+                  <Link
+                    className={styles.link}
+                    href='/position/customer'
+                  >
                     カスタマー
                   </Link>
                 </li>
 
                 <li className={styles.item}>
-                  <Link className={styles.link} href="/position/crm">
+                  <Link
+                    className={styles.link}
+                    href='/position/crm'
+                  >
                     CRM
                   </Link>
                 </li>

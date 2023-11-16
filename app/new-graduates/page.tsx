@@ -1,6 +1,6 @@
-import { PrimaryButton } from "../_components/ButtonLink";
-import Sheet from "../_components/Sheet";
-import styles from "./page.module.scss";
+import { PrimaryButton } from '../_components/ButtonLink';
+import Sheet from '../_components/Sheet';
+import styles from './page.module.scss';
 
 export default function Page() {
   return (
@@ -11,10 +11,9 @@ export default function Page() {
           新卒採用
         </h1>
         <p className={styles.headingText}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium
-          laborum debitis ad? Obcaecati dicta voluptatum temporibus facilis tenetur
-          corrupti accusantium esse harum quo, possimus culpa ipsam. Molestias, at
-          saepe. Quis!
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium laborum debitis ad?
+          Obcaecati dicta voluptatum temporibus facilis tenetur corrupti accusantium esse harum quo,
+          possimus culpa ipsam. Molestias, at saepe. Quis!
         </p>
       </div>
 
@@ -71,7 +70,7 @@ export default function Page() {
       </section>
 
       <div className={styles.flowLink}>
-        <PrimaryButton href="/flow">選考フローはこちら</PrimaryButton>
+        <PrimaryButton href='/flow'>選考フローはこちら</PrimaryButton>
       </div>
     </Sheet>
   );

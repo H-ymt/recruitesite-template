@@ -1,4 +1,4 @@
-import styles from "./index.module.scss";
+import styles from './index.module.scss';
 
 type Props = {
   activeId: string;
@@ -14,9 +14,7 @@ export default function SideNavigation({ activeId, ids, linkTexts }: Props) {
           <li key={index}>
             <a
               href={`#${id}`}
-              className={`${styles.sideMenuLink} ${
-                activeId === id ? styles.isActive : ""
-              }`}
+              className={`${styles.sideMenuLink} ${activeId === id ? styles.isActive : ''}`}
             >
               {linkTexts[index]}
             </a>

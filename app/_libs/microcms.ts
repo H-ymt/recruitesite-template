@@ -1,11 +1,11 @@
-import { createClient } from "microcms-js-sdk";
+import { createClient } from 'microcms-js-sdk';
 import type {
   MicroCMSImage,
   MicroCMSQueries,
   MicroCMSDate,
   MicroCMSContentId,
-} from "microcms-js-sdk";
-import { notFound } from "next/navigation";
+} from 'microcms-js-sdk';
+import { notFound } from 'next/navigation';
 
 // ニュースの型定義
 export type News = {
@@ -29,11 +29,11 @@ export type Meta = {
 export type Article = News & MicroCMSContentId & MicroCMSDate;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
-  throw new Error("MICROCMS_SERVICE_DOMAIN is required");
+  throw new Error('MICROCMS_SERVICE_DOMAIN is required');
 }
 
 if (!process.env.MICROCMS_API_KEY) {
-  throw new Error("MICROCMS_API_KEY is required");
+  throw new Error('MICROCMS_API_KEY is required');
 }
 
 // Initialize Client SDK.
@@ -46,7 +46,7 @@ export const client = createClient({
 export const getNewsList = async (queries?: MicroCMSQueries) => {
   const listData = await client
     .getList<News>({
-      endpoint: "news",
+      endpoint: 'news',
       queries,
     })
     .catch(notFound);
@@ -58,7 +58,7 @@ export const getNewsList = async (queries?: MicroCMSQueries) => {
 export const getNewsDetail = async (contentId: string, queries?: MicroCMSQueries) => {
   const detailData = await client
     .getListDetail<News>({
-      endpoint: "news",
+      endpoint: 'news',
       contentId,
       queries,
     })
@@ -71,7 +71,7 @@ export const getNewsDetail = async (contentId: string, queries?: MicroCMSQueries
 export const getMeta = async (queries?: MicroCMSQueries) => {
   const data = await client
     .getObject<Meta>({
-      endpoint: "meta",
+      endpoint: 'meta',
       queries,
     })
     .catch(() => null);
