@@ -61,7 +61,9 @@ export default function AboutSwiper() {
                   width={400}
                   height={400}
                   alt=''
-                  className={`${styles.slideImage} ${isActive ? styles.active : styles.notActive}`}
+                  className={`${styles.slideImage} ${
+                    isActive ? styles.active : styles.notActive
+                  }`}
                 />
               </div>
             )}

@@ -86,7 +86,9 @@ export default function MenuMobile() {
               />
             </div>
 
-            <div className={`${styles.menuContent} ${isContentOpen ? styles.isOpen : ''}`}>
+            <div
+              className={`${styles.menuContent} ${isContentOpen ? styles.isOpen : ''}`}
+            >
               <Link
                 className={styles.link}
                 href='/position/engineer'

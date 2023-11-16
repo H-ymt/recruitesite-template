@@ -90,7 +90,8 @@ export default function Page() {
           <p className={styles.flowItemText}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             <br />
-            Vel incidunt quam fuga repudiandae excepturi consectetur quidem voluptatem aliquid.
+            Vel incidunt quam fuga repudiandae excepturi consectetur quidem voluptatem
+            aliquid.
           </p>
         </li>
         <li

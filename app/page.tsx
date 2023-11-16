@@ -18,7 +18,9 @@ export default async function Page() {
       <div className={styles.hero}>
         <div className={styles.heroHead}>
           <div className={styles.heroContent}>
-            <h1 className={styles.heroTitle}>Developing websites using modern technologies.</h1>
+            <h1 className={styles.heroTitle}>
+              Developing websites using modern technologies.
+            </h1>
             <p className={styles.heroText}>
               私たちはモダンなフロントエンド技術とヘッドレスCMSを駆使して、高速かつセキュアでスケーラブルなWebサイトを構築します。
             </p>
