@@ -1,9 +1,9 @@
-@import "@/app/styles/breakpoint";
+@import '@/app/styles/breakpoint';
 
 .handleMenuButton {
+  position: relative;
   display: grid;
   place-items: center;
-  position: relative;
 
   @include mq(md) {
     display: none;
@@ -15,10 +15,10 @@
 }
 
 .overlay.isOpen {
-  display: block;
   position: fixed;
-  z-index: 1;
   inset: 0;
+  z-index: 1;
+  display: block;
   width: 100vw;
   height: 100vh;
   height: 100dvh;
@@ -30,15 +30,15 @@
 }
 
 .menu.isOpen {
-  display: block;
   position: absolute;
-  z-index: 1;
   top: calc(var(--headerHeight) - 16px);
   right: 24px;
+  z-index: 1;
+  display: block;
   width: min(100%, 260px);
   background-color: var(--bg-primary);
-  box-shadow: 0 4px 10px rgba(208, 205, 205, 0.45);
   border-radius: var(--borderRadius-sm);
+  box-shadow: 0 4px 10px rgba(208, 205, 205, 0.45);
 }
 
 .list {
@@ -56,8 +56,8 @@
 
 .menuTrigger {
   display: flex;
-  align-items: center;
   gap: 6px;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -78,13 +78,17 @@
 .menuContent .link {
   visibility: hidden;
   opacity: 0;
-  transition: visibility var(--transition-slowly), opacity var(--transition-slowly);
+  transition:
+    visibility var(--transition-slowly),
+    opacity var(--transition-slowly);
 }
 
 .menuContent.isOpen .link {
   visibility: visible;
   opacity: 1;
-  transition: visibility var(--transition-slowly), opacity var(--transition-slowly);
+  transition:
+    visibility var(--transition-slowly),
+    opacity var(--transition-slowly);
 }
 
 .chevron {
@@ -92,6 +96,6 @@
 }
 
 .chevron.isRouted {
-  transform: rotate(-180deg);
   transition: transform var(--transition-primary);
+  transform: rotate(-180deg);
 }

@@ -1,20 +1,20 @@
-@import "@/app/styles/breakpoint";
+@import '@/app/styles/breakpoint';
 
 .card {
-  display: flex;
   position: relative;
+  display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
   gap: 18px;
+  align-items: center;
+  justify-content: space-between;
   padding: 24px 30px;
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.06);
   border-radius: var(--borderRadius-lg);
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.06);
 
   @include mq(sm) {
     flex-direction: column;
-    align-items: flex-start;
     gap: 32px;
+    align-items: flex-start;
     max-width: 340px;
     padding: 48px 40px 30px;
   }
@@ -22,20 +22,20 @@
 
 .card:focus-visible {
   outline-width: 2px;
-  outline-offset: 0px;
   outline-color: var(--color-focus-outline);
+  outline-offset: 0px;
 }
 
 // カードにホバーした時のスタイル
 @media (hover: hover) {
   .card:hover .arrow {
-    transform: translateX(4px);
     transition: transform var(--transition-primary);
+    transform: translateX(4px);
   }
 
   .card:hover .image {
-    transform: scale(1.02);
     transition: transform var(--transition-primary);
+    transform: scale(1.02);
   }
 }
 
@@ -72,12 +72,12 @@
 }
 
 .arrow {
-  display: flex;
   position: absolute;
-  align-items: center;
-  justify-content: center;
   right: 18px;
   bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   background: #000;

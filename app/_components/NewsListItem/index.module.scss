@@ -1,4 +1,4 @@
-@import "@/app/styles/breakpoint";
+@import '@/app/styles/breakpoint';
 
 .newsListItem {
   padding-top: 16px;
@@ -15,8 +15,8 @@
 
   @include mq(md) {
     flex-direction: row;
-    align-items: center;
     gap: 24px;
+    align-items: center;
   }
 }
 
@@ -26,9 +26,9 @@
 }
 
 .title {
-  overflow: hidden;
-  display: -webkit-box;
-  text-overflow: ellipsis;
   -webkit-box-orient: vertical;
+  display: -webkit-box;
   -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

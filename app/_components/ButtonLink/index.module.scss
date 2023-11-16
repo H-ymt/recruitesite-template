@@ -1,34 +1,30 @@
-@import "@/app/styles/breakpoint";
+@import '@/app/styles/breakpoint';
 
 // ボタンコンポーネント共通のスタイル
 .button {
   display: inline-flex;
+  gap: 10px;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   width: fit-content;
   min-width: 220px;
   height: 56px;
   padding: 0 36px;
+  font-weight: 500;
   border: 1px solid var(--color-button-primary);
   border-radius: var(--borderRadius-lg);
-  font-weight: 500;
 }
 
 .button:focus-visible {
   outline-width: 2px;
-  outline-offset: 0px;
   outline-color: var(--color-focus-outline);
+  outline-offset: 0px;
 }
 
 // プライマリーボタンのスタイル
 .primaryButton {
   background: transparent;
-  background-image: linear-gradient(
-    90deg,
-    var(--color-button-primary) 50%,
-    transparent 50%
-  );
+  background-image: linear-gradient(90deg, var(--color-button-primary) 50%, transparent 50%);
   background-position: 100%;
   background-size: 250%;
   transition: background-position var(--transition-slowly);
@@ -42,23 +38,19 @@
   }
 
   .primaryButton:hover .icon {
-    transition: stroke 0.5s ease 1.2s;
     stroke: var(--color-text-white);
+    transition: stroke 0.5s ease 1.2s;
   }
 }
 
 // セカンダリーボタンのスタイル
 .secondaryButton {
   color: var(--color-button-secondary);
-  border: 1px solid var(--color-button-secondary);
   background: transparent;
-  background-image: linear-gradient(
-    90deg,
-    var(--color-button-secondary) 50%,
-    transparent 50%
-  );
+  background-image: linear-gradient(90deg, var(--color-button-secondary) 50%, transparent 50%);
   background-position: 100%;
   background-size: 250%;
+  border: 1px solid var(--color-button-secondary);
   transition: background-position var(--transition-slowly);
 }
 
@@ -70,20 +62,20 @@
   }
 
   .secondaryButton:hover .icon {
-    transition: stroke var(--transition-slowly);
     stroke: var(--color-text-white);
+    transition: stroke var(--transition-slowly);
   }
 }
 
 // 矢印アイコンのスタイル
 .icon {
-  transform: translate3d(0, 0, 0);
   transition: transform var(--transition-slowly);
+  transform: translate3d(0, 0, 0);
 }
 
 @media (hover: hover) {
   .button:hover .icon {
-    transform: translate3d(3px, 0, 0);
     transition: transform var(--transition-primary);
+    transform: translate3d(3px, 0, 0);
   }
 }

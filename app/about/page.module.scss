@@ -1,9 +1,9 @@
-@import "@/app/styles/breakpoint";
+@import '@/app/styles/breakpoint';
 
 .aboutTitle {
   padding-bottom: 16px;
-  text-align: center;
   font-size: 22px;
+  text-align: center;
 
   @include mq(md) {
     font-size: 36px;
@@ -16,8 +16,8 @@
 
 .heading {
   display: grid;
-  place-items: center;
   gap: 24px;
+  place-items: center;
   padding-bottom: 80px;
 }
 
@@ -66,30 +66,30 @@
 
 .welfareList {
   display: grid;
+  gap: 48px;
   width: min(100%, 300px);
   margin-inline: auto;
-  gap: 48px;
 
   @include mq(sm) {
-    width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 100%;
   }
 }
 
 .welfareItem {
   display: grid;
   grid-template-rows: subgrid;
-  align-items: start;
   grid-row: span 2;
   gap: 8px;
+  align-items: start;
 }
 
 .welfareHead {
   display: flex;
   flex-direction: column;
+  gap: 16px;
   align-items: center;
   justify-content: center;
-  gap: 16px;
 }
 
 .welfareDescription {
@@ -104,8 +104,8 @@
 
 .swiperText {
   padding-bottom: 20px;
-  text-align: center;
   font-size: 24px;
+  text-align: center;
 
   @include mq(md) {
     padding-bottom: 56px;

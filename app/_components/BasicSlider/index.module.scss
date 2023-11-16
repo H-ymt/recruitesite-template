@@ -1,4 +1,4 @@
-@import "@/app/styles/breakpoint";
+@import '@/app/styles/breakpoint';
 
 .slide {
   display: flex;
@@ -24,11 +24,11 @@
 }
 
 .active {
-  transform: scale(1);
   transition: transform var(--transition-primary);
+  transform: scale(1);
 }
 
 .notActive {
-  transform: scale(0.9);
   transition: transform var(--transition-primary);
+  transform: scale(0.9);
 }

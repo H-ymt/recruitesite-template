@@ -1,9 +1,9 @@
-@import "@/app/styles/breakpoint";
+@import '@/app/styles/breakpoint';
 
 .header {
   position: sticky;
-  z-index: var(--zIndex-header);
   top: 0;
+  z-index: var(--zIndex-header);
   background: var(--bg-primary);
   border-bottom: 1px solid #eeecec;
 }
@@ -13,14 +13,14 @@
 }
 
 .inner {
-  display: flex;
   position: relative;
-  justify-content: space-between;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   max-width: 1024px;
   height: var(--headerHeight);
-  margin-inline: auto;
   padding: 16px 24px;
+  margin-inline: auto;
 
   @include mq(md) {
     border-radius: var(--borderRadius-md);
@@ -39,8 +39,8 @@
 
 .logo {
   display: flex;
-  align-items: center;
   gap: 6px;
+  align-items: center;
   transition: opacity 0.2s ease-out;
 }
 

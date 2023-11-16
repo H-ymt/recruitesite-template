@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:style": "stylelint '**/*.{css,scss,sass}' --fix",
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
     "markuplint": "markuplint \"./app/**/*.{jsx,tsx}\""
   },
   "dependencies": {
@@ -17,9 +19,16 @@
     "lucide-react": "^0.284.0",
     "microcms-js-sdk": "^2.6.1",
     "next": "13.5.4",
+    "prettier": "^3.1.0",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.68.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recess-order": "^4.3.0",
+    "stylelint-config-recommended-scss": "^13.1.0",
+    "stylelint-order": "^6.0.3",
+    "stylelint-prettier": "^4.0.2",
     "swiper": "^11.0.3"
   },
   "devDependencies": {

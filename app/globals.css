@@ -25,9 +25,6 @@
   --zIndex-header: 100;
 }
 
-@media (prefers-color-scheme: dark) {
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -43,9 +40,8 @@ body {
 }
 
 body {
+  font-family: YuGothic, 'Yu Gothic', 'ヒラギノ角ゴシック', 'Hiragino Sans', sans-serif;
   font-weight: 600;
-  font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans",
-    sans-serif;
 }
 
 ul,
@@ -60,14 +56,14 @@ a {
 
 a:focus {
   outline-width: 2px;
-  outline-offset: 0px;
   outline-color: var(--color-focus-outline);
+  outline-offset: 0px;
 }
 
 a:focus-visible {
   outline-width: 2px;
-  outline-offset: 0px;
   outline-color: var(--color-focus-outline);
+  outline-offset: 0px;
 }
 
 img {

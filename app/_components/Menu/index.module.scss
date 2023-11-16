@@ -1,21 +1,21 @@
-@import "@/app/styles/breakpoint";
+@import '@/app/styles/breakpoint';
 
 .navigationMenuRoot {
   display: none;
 
   @include mq(md) {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: flex-end;
-    z-index: 1;
-    position: relative;
     width: fit-content;
   }
 }
 
 .navigationMenuList {
+  position: relative;
   display: flex;
   gap: 16px;
-  position: relative;
 }
 
 .navigationMenuItem {
@@ -33,14 +33,24 @@
   }
 }
 
+.navigationMenuContentItem a {
+  display: inline-block;
+  padding: 4px 6px;
+}
+
+.navigationMenuContentItem.isActive {
+  background: #3333331a;
+  border-radius: var(--borderRadius-xs);
+}
+
 .navigationMenuItem.isActive a {
   background: #3333331a;
 }
 
 .navigationMenuTrigger {
   display: flex;
-  align-items: center;
   gap: 4px;
+  align-items: center;
 }
 
 .navigationMenuLink {
@@ -48,43 +58,33 @@
 }
 
 .navigationMenuLink[data-active] {
-  text-decoration: "underline";
+  text-decoration: 'underline';
 }
 
 .navigationMenuContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   top: 36px;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 90%;
   padding: 18px 10px;
+  background-color: var(--bg-primary);
   border-radius: var(--borderRadius-md);
   box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.06);
-  background-color: var(--bg-primary);
   transition: transform 0.3s ease;
   transform: scaleY(0);
 }
 
-[data-state="open"] > .navigationMenuContent {
-  transform: scaleY(1);
+[data-state='open'] > .navigationMenuContent {
   transition: transform 0.3s ease;
+  transform: scaleY(1);
 }
 
 .navigationMenuContentList {
   display: flex;
   gap: 18px;
-}
-
-.navigationMenuContentItem a {
-  display: inline-block;
-  padding: 4px 6px;
-}
-
-.navigationMenuContentItem.isActive {
-  border-radius: var(--borderRadius-xs);
-  background: #3333331a;
 }
 
 @media (hover: hover) {
@@ -100,6 +100,6 @@
   transition: transform 0.3s ease;
 }
 
-[data-state="open"] > .chevron {
+[data-state='open'] > .chevron {
   transform: rotate(-180deg);
 }

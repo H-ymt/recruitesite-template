@@ -1,4 +1,4 @@
-@import "@/app/styles/breakpoint";
+@import '@/app/styles/breakpoint';
 
 .footer {
   border-top: 1px solid hsl(0deg 9% 31.47% / 10%);
@@ -9,8 +9,8 @@
   flex-direction: column;
   gap: 24px;
   max-width: 1040px;
-  margin-inline: auto;
   padding: 40px 32px;
+  margin-inline: auto;
 
   @include mq(md) {
     flex-direction: row;
@@ -51,8 +51,8 @@
   display: inline-flex;
   flex-direction: column;
   padding-left: 4px;
-  font-weight: 500;
   font-size: 14px;
+  font-weight: 500;
 }
 
 .link:hover {
