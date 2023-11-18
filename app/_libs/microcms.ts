@@ -1,10 +1,5 @@
+import type { MicroCMSContentId, MicroCMSDate, MicroCMSQueries } from 'microcms-js-sdk';
 import { createClient } from 'microcms-js-sdk';
-import type {
-  MicroCMSImage,
-  MicroCMSQueries,
-  MicroCMSDate,
-  MicroCMSContentId,
-} from 'microcms-js-sdk';
 import { notFound } from 'next/navigation';
 
 // ニュースの型定義
