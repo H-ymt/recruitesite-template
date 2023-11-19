@@ -1,9 +1,6 @@
 @import '@/app/styles/breakpoint';
 
 .newsListItem {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 8px;
   border-bottom: 1px solid var(--borderColor-gray);
 }
 
@@ -12,6 +9,7 @@
   flex-direction: column;
   gap: 8px;
   width: 100%;
+  padding: 16px 8px;
 
   @include mq(md) {
     flex-direction: row;
@@ -31,4 +29,11 @@
   -webkit-line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@media (hover: hover) {
+  .newsListItem:hover .title {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
 }
