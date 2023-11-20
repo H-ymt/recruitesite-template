@@ -1,5 +1,5 @@
-import Article from '@/app/_components/Article';
-import { getNewsDetail } from '@/app/_libs/microcms';
+import Article from "@/app/_components/Article";
+import { getNewsDetail } from "@/app/_libs/microcms";
 
 type Props = {
   params: {

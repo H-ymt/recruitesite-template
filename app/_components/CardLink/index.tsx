@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import styles from './index.module.scss';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import Image from "next/image";
+import styles from "./index.module.scss";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 type Props = {
   href: string;
@@ -22,8 +22,8 @@ export default function CardLink({ href, imgUrl, titleEn, titleJp }: Props) {
           className={styles.image}
           width={280}
           height={200}
-          alt=''
-          decoding='async'
+          alt=""
+          decoding="async"
         />
       )}
       <div className={styles.body}>

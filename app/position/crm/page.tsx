@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import Sheet from '@/app/_components/Sheet';
-import { useEffect, useId, useRef, useState } from 'react';
-import styles from './page.module.scss';
-import GridLayout from '@/app/_components/GridLayout';
-import SideNavigation from '@/app/_components/SideNavigation';
+import Sheet from "@/app/_components/Sheet";
+import { useEffect, useId, useRef, useState } from "react";
+import styles from "./page.module.scss";
+import GridLayout from "@/app/_components/GridLayout";
+import SideNavigation from "@/app/_components/SideNavigation";
 
 export default function Page() {
   const aboutId = useId();
@@ -15,7 +15,7 @@ export default function Page() {
   const summaryRef = useRef(null);
   const otherRef = useRef(null);
 
-  const [activeId, setActiveId] = useState('');
+  const [activeId, setActiveId] = useState("");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -27,7 +27,7 @@ export default function Page() {
         });
       },
       {
-        rootMargin: '0px 0px -200px 0px',
+        rootMargin: "0px 0px -200px 0px",
         threshold: 1,
       },
     );
@@ -63,7 +63,7 @@ export default function Page() {
             <SideNavigation
               activeId={activeId}
               ids={[aboutId, summaryId, otherId]}
-              linkTexts={['職務内容', '勤務概要', 'その他']}
+              linkTexts={["職務内容", "勤務概要", "その他"]}
             />
           </div>
         </div>

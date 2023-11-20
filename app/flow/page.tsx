@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React, { useEffect, useMemo, useRef } from 'react';
-import Sheet from '../_components/Sheet';
-import styles from './page.module.scss';
+import React, { useEffect, useMemo, useRef } from "react";
+import Sheet from "../_components/Sheet";
+import styles from "./page.module.scss";
 
 function useIntersectionRefs(): React.RefObject<HTMLLIElement>[] {
   return [
@@ -31,7 +31,7 @@ export default function Page() {
             });
           },
           {
-            rootMargin: '-50%',
+            rootMargin: "-50%",
           },
         ),
     );

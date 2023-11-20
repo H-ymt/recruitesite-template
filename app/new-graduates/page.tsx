@@ -1,6 +1,6 @@
-import { PrimaryButton } from '../_components/ButtonLink';
-import Sheet from '../_components/Sheet';
-import styles from './page.module.scss';
+import { PrimaryButton } from "../_components/ButtonLink";
+import Sheet from "../_components/Sheet";
+import styles from "./page.module.scss";
 
 export default function Page() {
   return (
@@ -70,7 +70,7 @@ export default function Page() {
       </section>
 
       <div className={styles.flowLink}>
-        <PrimaryButton href='/flow'>選考フローはこちら</PrimaryButton>
+        <PrimaryButton href="/flow">選考フローはこちら</PrimaryButton>
       </div>
     </Sheet>
   );

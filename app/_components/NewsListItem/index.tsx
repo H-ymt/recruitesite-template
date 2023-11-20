@@ -1,7 +1,7 @@
-import { formatDate } from '@/app/_libs/formatDate';
-import { Article } from '@/app/_libs/microcms';
-import Link from 'next/link';
-import styles from './index.module.scss';
+import { formatDate } from "@/app/_libs/formatDate";
+import { Article } from "@/app/_libs/microcms";
+import Link from "next/link";
+import styles from "./index.module.scss";
 
 type Props = {
   news: Article;

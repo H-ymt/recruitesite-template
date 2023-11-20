@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import styles from './index.module.scss';
-import Link from 'next/link';
+import Image from "next/image";
+import styles from "./index.module.scss";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -8,12 +8,12 @@ export default function Footer() {
       <div className={styles.footerInner}>
         <div className={styles.logo}>
           <Image
-            src='/favicon.ico'
+            src="/favicon.ico"
             width={24}
             height={24}
-            alt=''
-            decoding='async'
-            aria-hidden='true'
+            alt=""
+            decoding="async"
+            aria-hidden="true"
           />
         </div>
 
@@ -22,7 +22,7 @@ export default function Footer() {
             <li className={styles.item}>
               <Link
                 className={styles.link}
-                href='/about'
+                href="/about"
               >
                 企業情報
               </Link>
@@ -30,7 +30,7 @@ export default function Footer() {
             <li className={styles.item}>
               <Link
                 className={styles.link}
-                href='/new-graduates'
+                href="/new-graduates"
               >
                 新卒採用
               </Link>
@@ -38,7 +38,7 @@ export default function Footer() {
             <li className={styles.item}>
               <Link
                 className={styles.link}
-                href='/flow'
+                href="/flow"
               >
                 選考フロー
               </Link>
@@ -46,7 +46,7 @@ export default function Footer() {
             <li className={styles.item}>
               <Link
                 className={styles.link}
-                href='/interview'
+                href="/interview"
               >
                 社員インタビュー
               </Link>
@@ -60,7 +60,7 @@ export default function Footer() {
                 <li className={styles.item}>
                   <Link
                     className={styles.link}
-                    href='/position/engineer'
+                    href="/position/engineer"
                   >
                     エンジニア
                   </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
                 <li className={styles.item}>
                   <Link
                     className={styles.link}
-                    href='/position/designer'
+                    href="/position/designer"
                   >
                     Webデザイナー
                   </Link>
@@ -78,7 +78,7 @@ export default function Footer() {
                 <li className={styles.item}>
                   <Link
                     className={styles.link}
-                    href='/position/customer'
+                    href="/position/customer"
                   >
                     カスタマー
                   </Link>
@@ -87,7 +87,7 @@ export default function Footer() {
                 <li className={styles.item}>
                   <Link
                     className={styles.link}
-                    href='/position/crm'
+                    href="/position/crm"
                   >
                     CRM
                   </Link>

@@ -1,8 +1,8 @@
-import { formatDate } from '@/app/_libs/formatDate';
-import { Article } from '@/app/_libs/microcms';
-import { SecondaryButton } from '../ButtonLink';
-import Sheet from '../Sheet';
-import styles from './index.module.scss';
+import { formatDate } from "@/app/_libs/formatDate";
+import { Article } from "@/app/_libs/microcms";
+import { SecondaryButton } from "../ButtonLink";
+import Sheet from "../Sheet";
+import styles from "./index.module.scss";
 
 type Props = {
   data: Article;
@@ -22,7 +22,7 @@ export default function Article({ data }: Props) {
         />
 
         <div className={styles.button}>
-          <SecondaryButton href='/'>トップへ戻る</SecondaryButton>
+          <SecondaryButton href="/">トップへ戻る</SecondaryButton>
         </div>
       </Sheet>
     </main>

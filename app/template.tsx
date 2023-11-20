@@ -1,4 +1,4 @@
-import AnimationWrapper from './_components/AnimationWrapper';
+import AnimationWrapper from "./_components/AnimationWrapper";
 
 type Props = {
   children: React.ReactNode;

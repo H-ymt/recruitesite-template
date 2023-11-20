@@ -1,6 +1,6 @@
-import { Article } from '@/app/_libs/microcms';
-import NewsListItem from '../NewsListItem';
-import styles from './index.module.scss';
+import { Article } from "@/app/_libs/microcms";
+import NewsListItem from "../NewsListItem";
+import styles from "./index.module.scss";
 
 type Props = {
   articles?: Article[];

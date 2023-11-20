@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import BasicSlider from '../_components/BasicSlider';
-import Sheet from '../_components/Sheet';
-import styles from './page.module.scss';
+import Image from "next/image";
+import BasicSlider from "../_components/BasicSlider";
+import Sheet from "../_components/Sheet";
+import styles from "./page.module.scss";
 
 export default function Page() {
   return (
@@ -15,8 +15,8 @@ export default function Page() {
 
         <div className={styles.heading}>
           <Image
-            src='/about.svg'
-            alt=''
+            src="/about.svg"
+            alt=""
             width={400}
             height={400}
             className={styles.heroImage}
@@ -73,10 +73,10 @@ export default function Page() {
                 <dt className={styles.welfareHead}>
                   <p>
                     <Image
-                      src='/byod-image.svg'
-                      width='200'
-                      height='200'
-                      alt=''
+                      src="/byod-image.svg"
+                      width="200"
+                      height="200"
+                      alt=""
                     />
                   </p>
                   <p>BYOD</p>
@@ -90,10 +90,10 @@ export default function Page() {
                 <dt className={styles.welfareHead}>
                   <p>
                     <Image
-                      src='/remote-work.svg'
-                      width='200'
-                      height='200'
-                      alt=''
+                      src="/remote-work.svg"
+                      width="200"
+                      height="200"
+                      alt=""
                     />
                   </p>
                   <p>テレワーク手当</p>
@@ -107,10 +107,10 @@ export default function Page() {
                 <dt className={styles.welfareHead}>
                   <p>
                     <Image
-                      src='/cafe.svg'
-                      width='200'
-                      height='200'
-                      alt=''
+                      src="/cafe.svg"
+                      width="200"
+                      height="200"
+                      alt=""
                     />
                   </p>
                   <p>社内カフェ</p>
@@ -124,10 +124,10 @@ export default function Page() {
                 <dt className={styles.welfareHead}>
                   <p>
                     <Image
-                      src='/vacation.svg'
-                      width='200'
-                      height='200'
-                      alt=''
+                      src="/vacation.svg"
+                      width="200"
+                      height="200"
+                      alt=""
                     />
                   </p>
                   <p>土日祝日振替え休日</p>

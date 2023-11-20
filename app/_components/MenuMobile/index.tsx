@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { Menu as LucideMenu, X, ChevronDown, Plus, Minus } from 'lucide-react';
-import styles from './index.module.scss';
-import { useId, useState } from 'react';
-import Link from 'next/link';
+import { ChevronDown, Menu as LucideMenu, X } from "lucide-react";
+import Link from "next/link";
+import { useId, useState } from "react";
+import styles from "./index.module.scss";
 
 export default function MenuMobile() {
   const menuId = useId();
@@ -24,7 +24,7 @@ export default function MenuMobile() {
       <button
         className={styles.handleMenuButton}
         onClick={handleMenuToggle}
-        aria-label='メニューを開閉する'
+        aria-label="メニューを開閉する"
         aria-controls={menuId}
       >
         {isOpen ? (
@@ -43,20 +43,20 @@ export default function MenuMobile() {
       </button>
 
       <div
-        className={`${styles.overlay} ${isOpen ? styles.isOpen : ''}`}
+        className={`${styles.overlay} ${isOpen ? styles.isOpen : ""}`}
         onClick={handleMenuToggle}
       ></div>
 
       <nav
         id={menuId}
-        className={`${styles.menu} ${isOpen ? styles.isOpen : ''}`}
+        className={`${styles.menu} ${isOpen ? styles.isOpen : ""}`}
         aria-hidden={!isOpen}
       >
         <ul className={styles.list}>
           <li className={styles.item}>
             <Link
               className={styles.link}
-              href='/'
+              href="/"
               onClick={handleMenuToggle}
             >
               トップページ
@@ -65,7 +65,7 @@ export default function MenuMobile() {
           <li className={styles.item}>
             <Link
               className={styles.link}
-              href='/about'
+              href="/about"
               onClick={handleMenuToggle}
             >
               企業情報
@@ -73,7 +73,7 @@ export default function MenuMobile() {
           </li>
           <li className={styles.item}>
             <div
-              role='button'
+              role="button"
               aria-controls={menuContentId}
               className={styles.menuTrigger}
               onClick={handleContentToggle}
@@ -82,37 +82,37 @@ export default function MenuMobile() {
               <ChevronDown
                 size={18}
                 strokeWidth={1}
-                className={`${styles.chevron} ${isContentOpen ? styles.isRouted : ''}`}
+                className={`${styles.chevron} ${isContentOpen ? styles.isRouted : ""}`}
               />
             </div>
 
             <div
-              className={`${styles.menuContent} ${isContentOpen ? styles.isOpen : ''}`}
+              className={`${styles.menuContent} ${isContentOpen ? styles.isOpen : ""}`}
             >
               <Link
                 className={styles.link}
-                href='/position/engineer'
+                href="/position/engineer"
                 onClick={handleMenuToggle}
               >
                 エンジニア
               </Link>
               <Link
                 className={styles.link}
-                href='/position/designer'
+                href="/position/designer"
                 onClick={handleMenuToggle}
               >
                 Webデザイナー
               </Link>
               <Link
                 className={styles.link}
-                href='/position/customer'
+                href="/position/customer"
                 onClick={handleMenuToggle}
               >
                 カスタマー
               </Link>
               <Link
                 className={styles.link}
-                href='/position/crm'
+                href="/position/crm"
                 onClick={handleMenuToggle}
               >
                 CRM
@@ -122,7 +122,7 @@ export default function MenuMobile() {
           <li className={styles.item}>
             <Link
               className={styles.link}
-              href='/new-graduates'
+              href="/new-graduates"
               onClick={handleMenuToggle}
             >
               新卒採用
@@ -131,7 +131,7 @@ export default function MenuMobile() {
           <li className={styles.item}>
             <Link
               className={styles.link}
-              href='/flow'
+              href="/flow"
               onClick={handleMenuToggle}
             >
               選考フロー
@@ -140,10 +140,10 @@ export default function MenuMobile() {
           <li className={styles.item}>
             <Link
               className={styles.link}
-              href='/interview'
+              href="/entry"
               onClick={handleMenuToggle}
             >
-              社員インタビュー
+              エントリー
             </Link>
           </li>
         </ul>
