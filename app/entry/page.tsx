@@ -1,12 +1,48 @@
 import Sheet from "../_components/Sheet";
 
 export default function Page() {
+  async function formAction(formData: FormData) {
+    "use server";
+    const headers = new Headers([
+      ["Content-Type", "application/json"],
+      ["Authorization", "Baser" + process.env.SENDGRID_API_KEY],
+    ]);
+    const requestBody = {
+      personalizations: [
+        {
+          to: [
+            {
+              email: formData.get("email"),
+            },
+          ],
+        },
+      ],
+      subject: "お問い合わせを受け付けました。",
+      from: {
+        email: "y.handai1272@gmail.com",
+      },
+      content: [
+        {
+          type: "text/plain",
+          value:
+            "以下の内容でお問い合わせを受け付けました。\r\n------\r\n" +
+            formData.get("content"),
+        },
+      ],
+    };
+    const response = await fetch("https://api.sendgrid.com/v3/mail/send", {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify(requestBody),
+    });
+  }
+
   return (
     <>
       <Sheet>
         <div className="max-w-md mx-auto mt-4 bg-white p-6 rounded shadow-md">
           <h1 className="text-xl font-bold mb-4">お問い合わせフォーム</h1>
-          <form>
+          <form action={formAction}>
             <div className="mb-4">
               <label
                 htmlFor="email"

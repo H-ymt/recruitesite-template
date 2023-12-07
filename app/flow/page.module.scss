@@ -1,4 +1,4 @@
-@import '@/app/styles/breakpoint';
+@import "@/app/styles/breakpoint";
 
 .heading {
   display: flex;
@@ -55,7 +55,7 @@
   left: -40px;
   width: 20px;
   height: 20px;
-  content: '';
+  content: "";
   background-color: var(--color-text-accent);
   border-radius: 50%;
   transition: transform var(--transition-slowly);

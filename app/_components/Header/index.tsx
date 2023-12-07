@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import Menu from "../Menu";
-import styles from "./index.module.scss";
 import Link from "next/link";
-import MenuMobile from "../MenuMobile";
 import { useEffect, useState } from "react";
+import Menu from "../Menu";
+import MenuMobile from "../MenuMobile";
+import styles from "./index.module.scss";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
